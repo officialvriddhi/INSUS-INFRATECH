@@ -1,9 +1,12 @@
 import React, { Suspense } from "react"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Loader from "./components/Loader"
+
 
 const Home = React.lazy(()=>import("./pages/Home")) 
 const About = React.lazy(()=>import("./pages/About")) 
 const Work = React.lazy(()=>import("./pages/work")) 
+const NotFound = React.lazy(()=>import("./pages/NotFound"))
 
 
 
@@ -23,14 +26,14 @@ const Router = createBrowserRouter([
   },
   {
     path:'*',
-    element:<h1>not found</h1>
+    element:<NotFound/>
 
   }
 ])
 
 function App() {
   return (
-    <Suspense fallback={<h1>Loading ..</h1>}>
+    <Suspense fallback={<Loader/>}>
       <RouterProvider router={Router} />
     </Suspense>
   )

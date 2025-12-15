@@ -10,11 +10,9 @@ export default {
   plugins: [require('daisyui'),],
     daisyui: {
         themes: [
-      "light",
-      "dark",
-      "cupcake",
-      "halloween",
-      "dracula",
+        "light",
+        "dark",
+        "cupcake",
     ],
   },
 }
