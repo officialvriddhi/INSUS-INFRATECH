@@ -1,6 +1,7 @@
 import React, { Suspense } from "react"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Loader from "./components/Loader"
+import LoadingProvider from "./context/Loading"
 
 
 const Home = React.lazy(()=>import("./pages/Home")) 
@@ -33,9 +34,11 @@ const Router = createBrowserRouter([
 
 function App() {
   return (
-    <Suspense fallback={<Loader/>}>
-      <RouterProvider router={Router} />
-    </Suspense>
+    <LoadingProvider>
+      <Suspense fallback={<Loader/>}>
+        <RouterProvider router={Router} />
+      </Suspense>
+    </LoadingProvider>
   )
 }
 
