@@ -25,9 +25,9 @@ const Home = () => {
                 <h1 className='inline rounded-lg'>
                             <SplitText
                                 text="INSUS INFRATECH"
-                                className="font-bold text-slate-900 text-center text-7xl font-mono tracking-wider"
+                                className="font-bold text-slate-900 text-center text-7xl font-mono rounded-lg shadow-lg p-3"
                                 delay={100}
-                                duration={0.6}
+                                duration={0.4}
                                 ease="power3.out"
                                 splitType="chars"
                                 from={{ opacity: 0, y: 50 }}
@@ -35,12 +35,25 @@ const Home = () => {
                                 threshold={0.1}
                                 rootMargin="-100px"
                                 textAlign="center"
-                                onLetterAnimationComplete={handleAnimationComplete}
                             />
 
                 </h1>
 
-                <p className='text-slate-500 font-semibold text-2xl mt-4 text-right'> - Building Landmarks That Stand the Test of Time</p>
+
+                <span className="text-rotate text-7xl w-full justify-end ml-5 overflow-hidden">
+                    <span className="justify-items-center ">
+                        <span className='text-slate-500 font-semibold text-2xl mt-4 text-right bg-gradient-to-r  from-zinc-900 via-stone-700 to-amber-600 bg-clip-text text-transparent'> -  "Strong Foundations. Smarter Infrastructure."</span>
+                        
+                        <span className='text-slate-500 font-semibold text-2xl mt-4 text-right bg-gradient-to-r  from-zinc-900 via-stone-700 to-amber-600 bg-clip-text text-transparent'> -  "Building Landmarks That Stand the Test of Time"</span>
+
+                        <span className='text-slate-500 font-semibold text-2xl mt-4 text-right bg-gradient-to-r  from-zinc-900 via-stone-700 to-amber-600 bg-clip-text text-transparent'> - "Engineering Excellence. Building the Future"</span>
+
+                    </span>
+                </span>
+
+
+
+
 
                 <motion.p 
                 initial={{opacity:0,x:-300}}
@@ -53,29 +66,35 @@ const Home = () => {
 
                     <NavLink to={'/about'} className="relative inline-block 
                     after:absolute after:left-1/2 after:-translate-x-1/2 
-                    after:bottom-1 after:h-[3px] after:w-[50px] 
-                    after:bg-black after:content-[''] hover:after:w-[70px] after:transition-all after:duration-300 after:ease-in-out">About us</NavLink>
+                    after:-bottom-1 after:h-[3px] after:w-[80px] 
+                    after:bg-black after:content-[''] hover:after:w-[50px] after:transition-all after:duration-300 after:ease-in-out">About us</NavLink>
+                    
+                    <NavLink to={'/about'} className="relative inline-block 
+                    after:absolute after:left-1/2 after:-translate-x-1/2 
+                    after:-bottom-1 after:h-[3px] after:w-[75px] 
+                    after:bg-black after:content-[''] hover:after:w-[50px] after:transition-all after:duration-300 after:ease-in-out">our work</NavLink>
 
-                    <button className='rounded-lg border text-xl border-gray-200 px-4 py-2 bg-slate-700 text-white'>
-                        contact us
-                    </button>
+
+
                 </div>
 
             </div>
 
-                <div className='w-[30rem] h-[35rem] mt-10'>
+                <div className='w-[33%] h-[35rem] mt-10'>
                     <Stack
                         randomRotation={true}
-                        sensitivity={180}
+                        sensitivity={1000}
+                        autoplay={true}
+                        autoplayDelay={1800}
+                        pauseOnHover={true}
                         sendToBackOnClick={true}
                         cards={images.map((src, i) => (
                         <Image
                             key={i} 
                             src={src}
-                            width={500}
-                            height={500}
-                            alt="Picture of the author"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                            alt="Hero"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover'}} 
+                            loading="lazy"
                         />
                         ))}
                     />
