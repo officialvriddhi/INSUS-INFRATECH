@@ -48,7 +48,6 @@ const Navbar = () => {
 
             </motion.ul>
         </div>
-        <button className='hidden lg:block rounded-lg border border-gray-200 px-5 py-2 bg-slate-900 text-white'>Schedule a Call</button>
 </div>
   )
 }
