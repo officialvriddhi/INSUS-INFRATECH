@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Loader from "./components/Loader"
 import LoadingProvider from "./context/Loading"
 import Navbar from "./components/Navbar"
+import { ImageKitProvider } from '@imagekit/react';
 
 
 
@@ -61,9 +62,11 @@ const Router = createBrowserRouter([
 function App() {
   return (
     <LoadingProvider>
-      <Suspense fallback={<Loader/>}>
-        <RouterProvider router={Router} />
-      </Suspense>
+      <ImageKitProvider urlEndpoint="https://ik.imagekit.io/officialvriddhi/insus-infratech">
+        <Suspense fallback={<Loader/>}>
+          <RouterProvider router={Router} />
+        </Suspense>
+      </ImageKitProvider>
     </LoadingProvider>
   )
 }
