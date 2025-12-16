@@ -3,7 +3,9 @@ import Stack from '../components/HomeCarousel.jsx'
 import SplitText from '../components/SplitText.jsx';
 import { motion } from 'motion/react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import React from 'react';
 
+const About = React.lazy(()=>import('./About.jsx'))
 
 const images = [
   "/IMG5.PNG",
@@ -19,13 +21,14 @@ const handleAnimationComplete = () => {
 const Home = () => {
 const navigate = useNavigate();
   return (
-        <main className="relative z-10 flex h-full w-full items-center justify-around px-10">
+    <>
+        <main className="relative z-10 flex h-full w-full items-center justify-around px-10 mb-20">
 
             <div className='w-1/2 relative -top-5'>
                 <h1 className='inline rounded-lg'>
                             <SplitText
                                 text="INSUS INFRATECH"
-                                className="font-bold text-slate-900 text-center text-7xl font-mono rounded-lg shadow-lg p-3 mb-5"
+                                className="font-bold text-slate-900 text-center text-7xl font-mono rounded-lg shadow-lg p-3 mb-5 md:text-6xl"
                                 delay={100}
                                 duration={0.4}
                                 ease="power3.out"
@@ -97,8 +100,8 @@ const navigate = useNavigate();
                     />
                 </div>
         </main>
-
-
+        <About/>
+</>
   );
 };
 
