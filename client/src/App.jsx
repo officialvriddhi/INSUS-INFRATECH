@@ -9,7 +9,7 @@ import { ImageKitProvider } from '@imagekit/react';
 
 const Home = React.lazy(()=>import("./pages/Home")) 
 const About = React.lazy(()=>import("./pages/About")) 
-const Work = React.lazy(()=>import("./pages/work")) 
+const Work = React.lazy(()=>import("./pages/Work")) 
 const Services = React.lazy(()=>import("./pages/Services")) 
 const Contact = React.lazy(()=>import("./pages/Contact")) 
 
