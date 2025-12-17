@@ -79,7 +79,7 @@ const About = () => {
   ]
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden">
+    <section className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden" id='about'>
       {/* Hero Section */}
       <section ref={heroRef} className="relative bg-gradient-to-br from-gray-800 via-gray-700 to-gray-400 text-white py-24 md:py-32 mx-4 md:mx-6 lg:mx-10 mt-6 rounded-3xl overflow-hidden">
         <motion.div
@@ -434,7 +434,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </section>
-    </div>
+    </section>
   );
 };
 
