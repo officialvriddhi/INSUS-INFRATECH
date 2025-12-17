@@ -318,46 +318,63 @@ const About = () => {
           img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFo4yBR1zYOYs0PXs36LUi2pkfq3aULvYudcbKK6TAxQ&s",
         },
       ].map((leader, index) => (
-        <motion.div
-          key={index}
-          variants={cardVariants}
-          whileHover={{ y: -10, scale: 1.03 }}
-          className="bg-gradient-to-br from-white to-gray-50 
-          p-6 rounded-2xl shadow-lg border border-gray-200 
-          hover:shadow-2xl transition-all"
-        >
-          {/* ---------- Rectangular Image ---------- */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={leadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-            className="w-full h-56 mb-6 overflow-hidden rounded-xl shadow-md"
-          >
-            <img
-              src={leader.img}
-              alt={leader.name}
-              className="w-full h-full object-fit"
-              loading="lazy"
-            />
-          </motion.div>
+        <motion.div key={index} variants={cardVariants}>
 
-          {/* ---------- Text Content ---------- */}
-          <h4 className="text-2xl font-semibold text-center text-gray-900">
-            {leader.name}
-          </h4>
+          {/* 🔥 DaisyUI 3D wrapper */}
+          <div className="hover-3d w-full">
 
-          <p className="text-gray-600 text-center mt-2 text-lg">
-            {leader.role}
-          </p>
+            {/* 🔥 ACTUAL CARD */}
+            <div
+              className="
+              w-full
+                bg-slate-900 text-slate-100
+                p-6 rounded-2xl
+                border border-slate-700
+                shadow-xl
+                transition-all
+              "
+            >
+              {/* ---------- Image ---------- */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={leadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                className="w-full h-56 mb-6 overflow-hidden rounded-xl shadow-md"
+              >
+                <img
+                  src={leader.img}
+                  alt={leader.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </motion.div>
 
-          <p className="text-sm text-gray-500 text-center mt-3">
-            {leader.exp}
-          </p>
+              {/* ---------- Text Content ---------- */}
+              <h4 className="text-2xl font-semibold text-center text-white">
+                {leader.name}
+              </h4>
+
+              <p className="text-slate-300 text-center mt-2 text-lg">
+                {leader.role}
+              </p>
+
+              <p className="text-sm text-slate-400 text-center mt-3">
+                {leader.exp}
+              </p>
+            </div>
+
+            {/* 🔥 REQUIRED 8 EMPTY DIVS FOR 3D EFFECT */}
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+
+          </div>
         </motion.div>
       ))}
     </motion.div>
+
   </div>
 </section>
+
 
 
       {/* Experience & Projects */}
