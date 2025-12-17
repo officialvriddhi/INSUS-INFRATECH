@@ -1,5 +1,5 @@
-import { Image } from '@imagekit/react';
-import Stack from '../components/HomeCarousel.jsx'
+
+
 import SplitText from '../components/SplitText.jsx';
 import { motion } from 'motion/react';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -11,12 +11,7 @@ import { GrUserWorker } from "react-icons/gr";
 
 const About = React.lazy(()=>import('./About.jsx'))
 
-const images = [
-  "/IMG5.PNG",
-  "/IMG4.PNG",
-  "//IMG21.HEIC",
-  "/IMG8.JPG",
-];
+
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -135,28 +130,6 @@ const navigate = useNavigate();
                 </div>
 
             </div>
-
-                <div className='w-[33%] h-[35rem] mt-10'>
-                    <Stack
-                        randomRotation={true}
-                        sensitivity={1000}
-                        autoplay={true}
-                        autoplayDelay={1800}
-                        pauseOnHover={true}
-                        sendToBackOnClick={true}
-                        className="shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
-                        cards={images.map((src, i) => (
-                        <Image
-                            key={i} 
-                            src={src}
-                            alt="Hero"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover'}} 
-                            loading="lazy"
-                        />
-                        ))}
-                    />
-                </div>
-
         </main>
     <hr className='w-full mx-auto h-[2px] border-0 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300'/>
         <About/>
