@@ -81,7 +81,7 @@ const About = () => {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 md:py-32 mx-4 md:mx-6 lg:mx-10 mt-6 rounded-3xl overflow-hidden">
+      <section ref={heroRef} className="relative bg-gradient-to-br from-gray-800 via-gray-700 to-gray-400 text-white py-24 md:py-32 mx-4 md:mx-6 lg:mx-10 mt-6 rounded-3xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
