@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
+import { Image } from '@imagekit/react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,7 +47,12 @@ const Navbar = () => {
       navbar bg-base-100 shadow-md px-6"
     >
       <div className="flex-1">
-        <img src="/vite.svg" alt="logo" />
+        <Image 
+          src="/logo1.jpeg" 
+          alt="logo" 
+          className="size-12 rounded-full object-cover shadow-md"
+          loading="lazy"
+        />
       </div>
 
       <div className="flex-none mr-10">

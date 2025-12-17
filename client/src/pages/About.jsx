@@ -2,6 +2,7 @@ import React from 'react'
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { FaCheckCircle, FaArrowRight } from 'react-icons/fa'
+import { Image } from '@imagekit/react';
 
 const About = () => {
   const heroRef = useRef(null)
@@ -81,33 +82,66 @@ const About = () => {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden" id='about'>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative bg-gradient-to-br from-gray-800 via-gray-700 to-gray-400 text-white py-24 md:py-32 mx-4 md:mx-6 lg:mx-10 mt-6 rounded-3xl overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-purple-600/10"
-        />
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent"
-          >
-            About INSUS Infratech
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Building trust, delivering excellence, and shaping strong
-            infrastructure since 2005.
-          </motion.p>
-        </div>
-      </section>
+<section
+  ref={heroRef}
+  className="relative text-white py-24 md:py-32 mx-4 md:mx-6 lg:mx-10 mt-6 rounded-3xl overflow-hidden"
+>
+  {/* ---------- Background Image ---------- */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/AboutImg.jpg"   
+      alt="About background"
+      className="w-full h-full object-cover"
+      loading="lazy"
+    />
+  </div>
+
+  {/* ---------- Dark Overlay (for readability) ---------- */}
+  <div className="absolute inset-0 bg-black/55 z-10" />
+
+  {/* ---------- Subtle Animated Overlay (optional, keeps your effect) ---------- */}
+  <motion.div
+    initial={{ opacity: 0, scale: 1.1 }}
+    animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="absolute inset-0 z-20 bg-gradient-to-r 
+    from-blue-600/10 via-transparent to-purple-600/10"
+  />
+
+  {/* ---------- Logo (Top Right) ---------- */}
+  <div className="absolute top-6 right-6 z-30">
+    <Image
+      src="/logo1.jpeg"
+      alt="logo"
+      className="size-12 rounded-full object-cover shadow-lg"
+      loading="lazy"
+    />
+  </div>
+
+  {/* ---------- Content ---------- */}
+  <div className="relative z-30 max-w-7xl mx-auto px-6 text-center">
+    <motion.h1
+      initial={{ opacity: 0, y: 30 }}
+      animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 
+      bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent"
+    >
+      About INSUS Infratech
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
+    >
+      Building trust, delivering excellence, and shaping strong
+      infrastructure since 2005.
+    </motion.p>
+  </div>
+</section>
+
 
       {/* Company Overview */}
       <section ref={overviewRef} className="py-20 md:py-24">
@@ -247,52 +281,84 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section ref={leadershipRef} className="py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
+<section ref={leadershipRef} className="py-20 md:py-24">
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* ---------- Section Heading ---------- */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={leadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+        Leadership
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+    </motion.div>
+
+    {/* ---------- Leadership Cards ---------- */}
+    <motion.div
+      initial="hidden"
+      animate={leadershipInView ? "show" : "hidden"}
+      variants={containerVariants}
+      className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+    >
+      {[
+        {
+          name: "Ramvilash Yadav",
+          role: "Founder",
+          exp: "Industry experience since 2005",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFo4yBR1zYOYs0PXs36LUi2pkfq3aULvYudcbKK6TAxQ&s",
+        },
+        {
+          name: "Biresh Yadav",
+          role: "Co-Founder",
+          exp: "Industry experience since 2005",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFo4yBR1zYOYs0PXs36LUi2pkfq3aULvYudcbKK6TAxQ&s",
+        },
+      ].map((leader, index) => (
+        <motion.div
+          key={index}
+          variants={cardVariants}
+          whileHover={{ y: -10, scale: 1.03 }}
+          className="bg-gradient-to-br from-white to-gray-50 
+          p-6 rounded-2xl shadow-lg border border-gray-200 
+          hover:shadow-2xl transition-all"
+        >
+          {/* ---------- Rectangular Image ---------- */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={leadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={leadershipInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+            className="w-full h-56 mb-6 overflow-hidden rounded-xl shadow-md"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Leadership
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+            <img
+              src={leader.img}
+              alt={leader.name}
+              className="w-full h-full object-fit"
+              loading="lazy"
+            />
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            animate={leadershipInView ? "show" : "hidden"}
-            variants={containerVariants}
-            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
-          >
-            {[
-              { name: "Ramvilash Yadav", role: "Founder", exp: "Industry experience since 2005" },
-              { name: "Biresh Yadav", role: "Co-Founder", exp: "Industry experience since 2005" }
-            ].map((leader, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{ y: -10, scale: 1.03 }}
-                className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={leadershipInView ? { scale: 1 } : { scale: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1, type: "spring", stiffness: 200 }}
-                  className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mx-auto mb-4 flex items-center justify-center"
-                >
-                  <span className="text-white text-2xl font-bold">{leader.name.charAt(0)}</span>
-                </motion.div>
-                <h4 className="text-2xl font-semibold text-center text-gray-900">{leader.name}</h4>
-                <p className="text-gray-600 text-center mt-2 text-lg">{leader.role}</p>
-                <p className="text-sm text-gray-500 text-center mt-3">{leader.exp}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+          {/* ---------- Text Content ---------- */}
+          <h4 className="text-2xl font-semibold text-center text-gray-900">
+            {leader.name}
+          </h4>
+
+          <p className="text-gray-600 text-center mt-2 text-lg">
+            {leader.role}
+          </p>
+
+          <p className="text-sm text-gray-500 text-center mt-3">
+            {leader.exp}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Experience & Projects */}
       <section ref={projectsRef} className="bg-gradient-to-br from-gray-50 via-indigo-50/20 to-gray-50 py-20 md:py-24">
@@ -346,7 +412,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section ref={statsRef} className="py-20 md:py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+      {/* <section ref={statsRef} className="py-20 md:py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -381,7 +447,7 @@ const About = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section ref={ctaRef} className="py-20 md:py-24">
