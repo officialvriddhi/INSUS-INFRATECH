@@ -456,11 +456,11 @@ const About = () => {
 
           {/* ---------- Content ---------- */}
           <div className="relative z-20 h-full flex items-end justify-between p-6">
-            <h3 className="font-semibold text-white text-lg group-hover:text-blue-400 transition-colors">
+            <h3 className="font-semibold text-white text-lg group-hover:text-amber-300 transition-colors">
               {project.name}
             </h3>
 
-            <FaArrowRight className="text-white opacity-80 group-hover:translate-x-1 transition-transform" />
+            {/* <FaArrowRight className="text-white opacity-80 group-hover:translate-x-1 transition-transform" /> */}
           </div>
         </motion.div>
       ))}
