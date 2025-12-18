@@ -1,3 +1,4 @@
+import { Image } from "@imagekit/react";
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import {
@@ -11,7 +12,7 @@ import {
 
 const Contact = () => {
   return (
-    <section className="w-full bg-gray-50 py-20 md:py-24">
+    <section className="w-full py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ---------- Heading ---------- */}
@@ -149,31 +150,20 @@ const Contact = () => {
         <p className="text-sm text-gray-600">Latest announcements</p>
       </div>
     </a>
-
-    {/* YouTube */}
-    <a
-      href="https://youtube.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
-    >
-      <span className="bg-red-600 text-white p-3 rounded-full group-hover:scale-110 transition">
-        <FaYoutube className="text-lg" />
-      </span>
-      <div>
-        <p className="font-semibold text-gray-900">YouTube</p>
-        <p className="text-sm text-gray-600">Project videos</p>
-      </div>
-    </a>
-
   </div>
 </div>
 
 
   {/* ---------- Address & Info (UNCHANGED) ---------- */}
   <div className="bg-white p-8 rounded-xl shadow-md border">
-    <h3 className="text-2xl font-semibold mb-6 text-gray-900">
-      Office Address
+    <h3 className="text-3xl font-semibold mb-6 text-gray-900 flex items-center justify-between">
+      <span>Office Address</span>
+        <Image
+            src="/logo3.jpeg"
+            alt="logo"
+            className="size-20 rounded-full object-contain shadow-md cursor-pointer"
+              loading="lazy"
+                />
     </h3>
 
     <div className="flex items-start gap-4 mb-6">
@@ -185,13 +175,6 @@ const Contact = () => {
       </p>
     </div>
 
-    <p className="text-gray-600 mb-2">
-      <strong>Working Hours:</strong>
-    </p>
-    <p className="text-gray-600">
-      Monday – Saturday<br />
-      9:00 AM – 6:00 PM
-    </p>
 
     <div className="mt-8 rounded-lg overflow-hidden">
       <iframe
