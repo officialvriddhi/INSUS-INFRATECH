@@ -77,7 +77,7 @@ const Contact = () => {
     
     data-cal-config='{"layout":"month_view"}'
 >
-  <div className="p-3 rounded-full">
+  <div className="rounded-full">
     <SiGooglemeet className="text-green-600 text-2xl " />
   </div>
 
