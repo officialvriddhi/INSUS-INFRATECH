@@ -50,9 +50,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-1 cursor-pointer" onClick={() => navigate('/')}>
           <Image
-            src="/logo1.jpeg"
+            src="/logo3.jpeg"
             alt="logo"
-            className="size-12 rounded-full object-cover shadow-md"
+            className="size-12 rounded-full object-contain shadow-md"
             loading="lazy"
           />
         </div>

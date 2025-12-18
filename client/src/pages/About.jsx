@@ -64,12 +64,30 @@ const About = () => {
   ]
 
   const projects = [
-    "Marriott Hotel – Jaipur",
-    "Rambagh Palace – Jaipur",
-    "Sterling – Ayodhya",
-    "Spinny – Lucknow",
-    "Dainik Bhaskar Office – Patna",
-    "True Value – Indore"
+      {
+        name:"Marriott Hotel – Jaipur",
+        img:'/IMg1.JPG'
+      },
+      {
+        name:"Rambagh Palace – Jaipur",
+        img:'/IMG4.PNG'
+      },
+      {
+        name:"Sterling – Ayodhya",
+        img:'/IMG19.HEIC'
+      },
+      {
+        name:"Spinny – Lucknow",
+        img:'/IMG10.JPG'
+      },
+      {
+        name:"Dainik Bhaskar Office – Patna",
+        img:'/IMG2.JPG'
+      },
+      {
+        name:"True Value – Indore",
+        img:'/IMG8.JPG'
+      },
   ]
 
   const stats = [
@@ -111,7 +129,7 @@ const About = () => {
   {/* ---------- Logo (Top Right) ---------- */}
   <div className="absolute top-6 right-6 z-30">
     <Image
-      src="/logo1.jpeg"
+      src="/logo3.jpeg"
       alt="logo"
       className="size-12 rounded-full object-cover shadow-lg"
       loading="lazy"
@@ -309,21 +327,21 @@ const About = () => {
           name: "Ramvilash Yadav",
           role: "Founder",
           exp: "Industry experience since 2005",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFo4yBR1zYOYs0PXs36LUi2pkfq3aULvYudcbKK6TAxQ&s",
+          img: "https://wallpapercave.com/wp/iJpWQ3v.jpg",
         },
         {
           name: "Biresh Yadav",
           role: "Co-Founder",
           exp: "Industry experience since 2005",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFo4yBR1zYOYs0PXs36LUi2pkfq3aULvYudcbKK6TAxQ&s",
+          img: "https://wallpapercave.com/wp/iJpWQ3v.jpg",
         },
       ].map((leader, index) => (
         <motion.div key={index} variants={cardVariants}>
 
-          {/* 🔥 DaisyUI 3D wrapper */}
+ 
           <div className="hover-3d w-full">
 
-            {/* 🔥 ACTUAL CARD */}
+
             <div
               className="
               w-full
@@ -378,93 +396,81 @@ const About = () => {
 
 
       {/* Experience & Projects */}
-      <section ref={projectsRef} className="bg-gradient-to-br from-gray-50 via-indigo-50/20 to-gray-50 py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Our Experience
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
-              We have successfully delivered projects for reputed brands and
-              institutions across India, reflecting our ability to handle projects
-              of varying scale and complexity.
-            </p>
-          </motion.div>
+<section
+  ref={projectsRef}
+  className="bg-gradient-to-br from-gray-50 via-indigo-50/20 to-gray-50 py-20 md:py-24"
+>
+  <div className="max-w-7xl mx-auto px-6">
 
-          <motion.div
-            initial="hidden"
-            animate={projectsInView ? "show" : "hidden"}
-            variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{ y: -8, scale: 1.05, rotate: 1 }}
-                className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all cursor-pointer group"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-gray-900 text-lg group-hover:text-blue-600 transition-colors">
-                    {project}
-                  </h3>
-                  <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    whileHover={{ opacity: 1, x: 0 }}
-                    className="text-blue-600"
-                  >
-                    <FaArrowRight />
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+    {/* ---------- Section Heading ---------- */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={projectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+        Our Experience
+      </h2>
 
-      {/* Stats */}
-      {/* <section ref={statsRef} className="py-20 md:py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            animate={statsInView ? "show" : "hidden"}
-            variants={containerVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="text-center"
-              >
-                <motion.h3
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={statsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
-                  transition={{ delay: 0.2 + index * 0.1, type: "spring", stiffness: 200 }}
-                  className="text-5xl md:text-6xl font-bold text-white mb-3 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent"
-                >
-                  {stat.value}
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={statsInView ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="text-gray-300 text-lg md:text-xl"
-                >
-                  {stat.label}
-                </motion.p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
+      <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+
+      <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+        We have successfully delivered projects for reputed brands and
+        institutions across India, reflecting our ability to handle projects
+        of varying scale and complexity.
+      </p>
+    </motion.div>
+
+    {/* ---------- Projects Grid ---------- */}
+    <motion.div
+      initial="hidden"
+      animate={projectsInView ? "show" : "hidden"}
+      variants={containerVariants}
+      className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+      {projects.map((project, index) => (
+        <motion.div
+          key={index}
+          variants={cardVariants}
+          whileHover={{ y: -8 }}
+          className="
+            relative h-64 overflow-hidden
+            rounded-xl border border-gray-100
+            shadow-md hover:shadow-xl
+            transition-all cursor-pointer group
+          "
+        >
+          {/* ---------- Background Image ---------- */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={project.img}
+              alt={project}
+              className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+          </div>
+
+          {/* ---------- Dark Overlay ---------- */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+
+          {/* ---------- Content ---------- */}
+          <div className="relative z-20 h-full flex items-end justify-between p-6">
+            <h3 className="font-semibold text-white text-lg group-hover:text-blue-400 transition-colors">
+              {project.name}
+            </h3>
+
+            <FaArrowRight className="text-white opacity-80 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+
+  </div>
+</section>
+
+
+
 
       {/* CTA */}
       <section ref={ctaRef} className="py-20 md:py-24">
