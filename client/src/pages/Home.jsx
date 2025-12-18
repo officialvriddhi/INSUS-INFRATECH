@@ -5,9 +5,18 @@ import { useNavigate } from 'react-router-dom';
 import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
 import { SiTrustpilot } from "react-icons/si";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+
+    useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({"namespace":"insus-infratech-client-meeting"});
+      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    })();
+  }, [])
 
   return (
     <>
@@ -31,7 +40,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/10 z-10"></div>
 
         {/* ---------- Content ---------- */}
-        <div className="relative z-20 w-[90%] lg:w-[80%] mx-auto h-full 
+        <div className="relative z-20 w-[100%] lg:w-[80%] mx-auto h-full 
         flex flex-col justify-center items-center text-center px-4">
 
           {/* Title */}
@@ -39,7 +48,7 @@ const Home = () => {
             <SplitText
               text="INSUS INFRATECH"
               className="font-extrabold tracking-wide text-slate-300 
-              text-3xl md:text-5xl lg:text-7xl drop-shadow-xl"
+              text-4xl md:text-5xl lg:text-7xl drop-shadow-xl"
               delay={100}
               duration={0.4}
               ease="power3.out"
@@ -131,14 +140,14 @@ const Home = () => {
               Our Work
             </button>
 
-            <button
-              onClick={() => navigate('/contact')}
-              className="px-6 py-2 rounded-md 
-              border border-white text-white
+              <button data-cal-namespace="insus-infratech-client-meeting"
+                data-cal-link="shubham-sinha-xxiobo/insus-infratech-client-meeting"
+                
+                data-cal-config='{"layout":"month_view"}'
+                className="px-6 py-2 rounded-md 
+                border border-white text-white
               hover:bg-white hover:text-black transition"
-            >
-              Contact Us
-            </button>
+                >Book a Meeting</button>;
           </div>
 
         </div>

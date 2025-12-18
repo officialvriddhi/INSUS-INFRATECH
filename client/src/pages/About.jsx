@@ -346,7 +346,7 @@ const About = () => {
               className="
               w-full
                 bg-slate-900 text-slate-100
-                p-6 rounded-2xl
+                p-2 pb-6 rounded-2xl
                 border border-slate-700
                 shadow-xl
                 transition-all
@@ -362,7 +362,7 @@ const About = () => {
                 <Image
                   src={leader.img}
                   alt={leader.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover-3d rounded-b-xl"
                   loading="lazy"
                 />
               </motion.div>
@@ -381,9 +381,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* 🔥 REQUIRED 8 EMPTY DIVS FOR 3D EFFECT */}
-            {/* <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div> */}
 
           </div>
         </motion.div>

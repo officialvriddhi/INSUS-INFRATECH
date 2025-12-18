@@ -15,7 +15,7 @@ const Loader = () => {
           <Image
             src="/logo3.jpeg"
             alt="INSUS Infratech logo"
-            className="w-24 h-24 rounded-full object-contain shadow-lg animate-bounce"
+            className="w-24 h-24 rounded-full object-contain shadow-lg"
             loading="lazy"
           />
 
