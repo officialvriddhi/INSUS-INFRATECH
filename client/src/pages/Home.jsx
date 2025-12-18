@@ -68,11 +68,23 @@ const Home = () => {
           </motion.p>
 
           {/* Tagline */}
-          <div className="mt-6 w-full flex justify-end">
-            <p className="text-slate-300 text-sm md:text-base font-medium text-right">
-              — Building Landmarks That Stand the Test of Time
-            </p>
-          </div>
+
+          <span className="text-rotate mt-6 flex justify-end">
+            <span className='h-fit'>
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500
+   bg-clip-text text-transparent">
+                  " Infrastructure That Stands the Test of Time "
+              </p>
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500
+ bg-clip-text text-transparent">
+                  " Strong Foundations for a Stronger Tomorrow "
+              </p>
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500 bg-clip-text text-transparent">
+                  " Engineering Excellence. Building the Future "
+              </p>
+
+            </span>
+          </span>
 
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 w-full text-white">

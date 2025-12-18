@@ -488,7 +488,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2 }}
-                className="text-4xl md:text-5xl font-bold mb-6"
+                className="text-3xl md:text-4xl font-bold mb-6 lg:text-5xl"
               >
                 Let's Build Together
               </motion.h2>
