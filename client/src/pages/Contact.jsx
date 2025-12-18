@@ -8,9 +8,20 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+import { SiGooglemeet } from "react-icons/si";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 
 const Contact = () => {
+
+      useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({"namespace":"insus-infratech-client-meeting"});
+      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    })();
+  }, [])
+
   return (
     <section className="w-full py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -61,18 +72,27 @@ const Contact = () => {
           </a>
 
           {/* WhatsApp */}
-          <a
-            href="https://wa.me/919702613313"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
-          >
-            <FaWhatsapp className="text-green-500 text-2xl" />
-            <div>
-              <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-              <p className="text-gray-600">Quick chat with our team</p>
-            </div>
-          </a>
+<button
+  className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
+  data-cal-namespace="insus-infratech-client-meeting"
+                data-cal-link="shubham-sinha-xxiobo/insus-infratech-client-meeting"
+                
+                data-cal-config='{"layout":"month_view"}'
+>
+  <div className="p-3 rounded-full">
+    <SiGooglemeet className="text-green-600 text-2xl " />
+  </div>
+
+  <div className="text-left">
+    <h4 className="font-semibold text-gray-900">
+      Book a Google Meet
+    </h4>
+    <p className="text-gray-600 text-sm">
+      Schedule a virtual consultation
+    </p>
+  </div>
+</button>
+
 
         </div>
 

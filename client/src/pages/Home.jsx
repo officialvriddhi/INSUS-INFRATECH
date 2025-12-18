@@ -5,18 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
 import { SiTrustpilot } from "react-icons/si";
-import { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+
 
 const Home = () => {
   const navigate = useNavigate();
 
-    useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({"namespace":"insus-infratech-client-meeting"});
-      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    })();
-  }, [])
+
 
   return (
     <>
@@ -140,14 +134,12 @@ const Home = () => {
               Our Work
             </button>
 
-              <button data-cal-namespace="insus-infratech-client-meeting"
-                data-cal-link="shubham-sinha-xxiobo/insus-infratech-client-meeting"
-                
-                data-cal-config='{"layout":"month_view"}'
+              <button 
+              onClick={()=>navigate('/contact')}
                 className="px-6 py-2 rounded-md 
                 border border-white text-white
               hover:bg-white hover:text-black transition"
-                >Book a Meeting</button>;
+                >Contact us</button>;
           </div>
 
         </div>
