@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
+
       <motion.div
         initial={{ y: -80, opacity: 0 }}
         animate={visible ? { y: 0, opacity: 1 } : { y: -80, opacity: 0 }}
@@ -57,7 +57,7 @@ const Navbar = () => {
           />
         </div>
 
-        {/* ---------- Desktop Menu ---------- */}
+
         <div className="flex-none hidden md:flex">
           <motion.ul
             variants={containerVariants}
@@ -82,7 +82,7 @@ const Navbar = () => {
           </motion.ul>
         </div>
 
-        {/* ---------- Mobile Hamburger ---------- */}
+
         <div className="flex-none md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (
@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
       </motion.div>
 
-      {/* ================= MOBILE MENU ================= */}
+
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={menuOpen ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
