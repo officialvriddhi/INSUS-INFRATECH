@@ -20,7 +20,7 @@ const Home = () => {
         {/* ---------- Background Video ---------- */}
         <div className="absolute inset-0 z-0">
           <Video
-            src="/video1.MOV"
+            src="/video2.mp4"
             autoPlay
             muted
             loop
@@ -31,7 +31,7 @@ const Home = () => {
         </div>
 
         {/* ---------- Dark Overlay ---------- */}
-        <div className="absolute inset-0 bg-black/10 z-10"></div>
+        <div className="absolute inset-0 bg-black/55 z-10"></div>
 
         {/* ---------- Content ---------- */}
         <div className="relative z-20 w-[100%] lg:w-[80%] mx-auto h-full 
