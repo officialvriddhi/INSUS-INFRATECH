@@ -12,21 +12,12 @@ const Loader = () => {
       <div className="relative z-10 flex flex-col items-center gap-4">
         
         {/* Logo Animation */}
-        <motion.div
-          // animate={{ scale: [1, 1.08, 1] }}
-          // transition={{
-          //   duration: 1.2,
-          //   repeat: Infinity,
-          //   ease: "easeInOut",
-          // }}
-        >
           <Image
             src="/logo3.jpeg"
             alt="INSUS Infratech logo"
             className="w-24 h-24 rounded-full object-contain shadow-lg animate-bounce"
             loading="lazy"
           />
-        </motion.div>
 
         {/* Text */}
         <p className="text-lg font-medium text-slate-700 tracking-wide">
