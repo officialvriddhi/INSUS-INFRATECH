@@ -23,7 +23,7 @@ const Home = () => {
             autoPlay
             muted
             loop
-            loading="lazy"
+            loading="eager"
             playsInline
             className="w-full h-full object-cover"
           />
