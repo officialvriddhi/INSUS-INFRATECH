@@ -6,8 +6,6 @@ import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
 import { SiTrustpilot } from "react-icons/si";
 
-const About = React.lazy(() => import('./About.jsx'));
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -151,7 +149,7 @@ const Home = () => {
       bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300" />
 
       {/* About Section */}
-      <About />
+      {/* <About /> */}
     </>
   );
 };

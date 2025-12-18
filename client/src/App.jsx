@@ -2,11 +2,12 @@ import React, { Suspense } from "react"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Loader from "./components/Loader"
 import LoadingProvider from "./context/Loading"
-import Navbar from "./components/Navbar"
 import { ImageKitProvider } from '@imagekit/react';
 
 
 
+const Navbar = React.lazy(()=>import("./components/Navbar"))
+const Footer =  React.lazy(()=>import("./components/Footer"))
 const Home = React.lazy(()=>import("./pages/Home")) 
 const About = React.lazy(()=>import("./pages/About")) 
 const Work = React.lazy(()=>import("./pages/Work")) 
@@ -20,6 +21,7 @@ const Layout = ()=>{
     <>
       <Navbar/>
       <Outlet/>
+      <Footer/>
     </>
   )
 }
@@ -28,12 +30,25 @@ const Layout = ()=>{
 const Router = createBrowserRouter([
   {
     path:'/',
+    element:<>
+                <Navbar/>
+                <Home/>
+                <About/>
+                <Work/>
+                <Services/>
+                <Contact/>
+                <Footer/>
+            </>
+
+  },
+  {
+    path:'/',
     element:<Layout/>,
     children:[
-      {
-        path:'/',
-        element:<Home/>
-      },
+      // {
+      //   path:'/',
+      //   element:<Home/>
+      // },
       {
         path:'/about',
         element:<About/>
