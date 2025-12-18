@@ -38,8 +38,8 @@ const Home = () => {
           <h1 className="mb-4">
             <SplitText
               text="INSUS INFRATECH"
-              className="font-extrabold tracking-wide text-slate-300
-              text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-xl"
+              className="font-extrabold tracking-wide text-slate-300 
+              text-3xl md:text-5xl lg:text-7xl drop-shadow-xl"
               delay={100}
               duration={0.4}
               ease="power3.out"
@@ -58,7 +58,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-3xl text-gray-200 
-            text-sm sm:text-base md:text-lg font-light leading-relaxed"
+            text-[14px] sm:text-base md:text-lg font-light leading-relaxed"
           >
             INSUS INFRATECH Private Limited is a trusted construction and infrastructure
             company delivering premium hotels, commercial spaces, and public landmarks
