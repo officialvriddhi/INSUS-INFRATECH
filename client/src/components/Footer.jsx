@@ -70,7 +70,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Insus Infratech Ltd. All rights reserved.  
             <span className="mx-2 hidden md:inline">|</span>
             <br className="md:hidden" />
-            Designed & Built by <span className="font-semibold">Vriddhi Team</span>
+            Designed & Built by <NavLink className="font-semibold underline-offset-2 hover:underline transition-all duration-100 ease-in">Vriddhi Team</NavLink>
           </p>
 
         </div>
