@@ -1,11 +1,9 @@
 import { Image } from "@imagekit/react";
-import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from "react-icons/fa";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
 import { SiGooglemeet } from "react-icons/si";
@@ -15,9 +13,9 @@ import { useEffect } from "react";
 
 const Contact = () => {
 
-      useEffect(() => {
+  useEffect(() => {
     (async function () {
-      const cal = await getCalApi({"namespace":"insus-infratech-client-meeting"});
+      const cal = await getCalApi({"namespace":"consultation"});
       cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
     })();
   }, [])
@@ -74,10 +72,10 @@ const Contact = () => {
           {/* WhatsApp */}
 <button
   className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
-  data-cal-namespace="insus-infratech-client-meeting"
-                data-cal-link="shubham-sinha-xxiobo/insus-infratech-client-meeting"
-                
-                data-cal-config='{"layout":"month_view"}'
+    data-cal-namespace="consultation"
+    data-cal-link="shubham-sinha-xxiobo/consultation"
+    
+    data-cal-config='{"layout":"month_view"}'
 >
   <div className="p-3 rounded-full">
     <SiGooglemeet className="text-green-600 text-2xl " />
@@ -214,3 +212,22 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+/* First make sure that you have installed the package */
+
+/* If you are using yarn */
+// yarn add @calcom/embed-react
+
+/* If you are using npm */
+// npm install @calcom/embed-react
+  
+// import { getCalApi } from "@calcom/embed-react";
+// import { useEffect } from "react";
+// export default function MyApp() {
+
+//   return <button 
+
+//   >Click me</button>;
+// };
+  
