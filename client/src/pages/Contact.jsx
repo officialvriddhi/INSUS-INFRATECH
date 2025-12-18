@@ -1,5 +1,13 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaXTwitter,
+} from "react-icons/fa6";
+
 
 const Contact = () => {
   return (
@@ -7,28 +15,35 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ---------- Heading ---------- */}
-        <div className="text-center mb-14">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Get in Touch
-          </h1>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            Let’s discuss your next construction or infrastructure project.
-            Our team is ready to assist you.
-          </p>
-        </div>
+<div className="text-center mb-14">
+  <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+    Get in Touch
+  </h1>
+
+  {/* Underline */}
+  <div className="mt-3 flex justify-center">
+    <span className="block h-1 w-40 rounded-full bg-blue-600"></span>
+  </div>
+
+  <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
+    Let’s discuss your next construction or infrastructure project.
+    Our team is ready to assist you.
+  </p>
+</div>
+
 
         {/* ---------- Quick Contact Cards ---------- */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
 
           {/* Call */}
           <a
-            href="tel:+919XXXXXXXXX"
+            href="tel:+919702755165"
             className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
           >
             <FaPhoneAlt className="text-green-600 text-2xl" />
             <div>
               <h4 className="font-semibold text-gray-900">Call Us</h4>
-              <p className="text-gray-600">+91 9XXXXXXXXX</p>
+              <p className="text-gray-600">+91 9702613313</p>
             </div>
           </a>
 
@@ -46,7 +61,7 @@ const Contact = () => {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/919XXXXXXXXX"
+            href="https://wa.me/919702613313"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
@@ -61,85 +76,135 @@ const Contact = () => {
         </div>
 
         {/* ---------- Form + Address ---------- */}
-        <div className="grid md:grid-cols-2 gap-10">
+<div className="grid md:grid-cols-2 gap-10 items-start">
 
-          {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-md border">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">
-              Request a Call Back
-            </h3>
+  {/* ---------- Social Media Links ---------- */}
+<div className="bg-white p-8 rounded-xl shadow-md border">
+  <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+    Connect With Us
+  </h3>
 
-            <form className="space-y-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+    {/* Facebook */}
+    <a
+      href="https://facebook.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
+    >
+      <span className="bg-blue-600 text-white p-3 rounded-full group-hover:scale-110 transition">
+        <FaFacebookF className="text-lg" />
+      </span>
+      <div>
+        <p className="font-semibold text-gray-900">Facebook</p>
+        <p className="text-sm text-gray-600">Follow our updates</p>
+      </div>
+    </a>
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+    {/* Instagram */}
+    <a
+      href="https://instagram.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
+    >
+      <span className="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-3 rounded-full group-hover:scale-110 transition">
+        <FaInstagram className="text-lg" />
+      </span>
+      <div>
+        <p className="font-semibold text-gray-900">Instagram</p>
+        <p className="text-sm text-gray-600">Project visuals</p>
+      </div>
+    </a>
 
-              <textarea
-                rows="4"
-                placeholder="Tell us about your project"
-                className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+    {/* LinkedIn */}
+    <a
+      href="https://linkedin.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
+    >
+      <span className="bg-blue-700 text-white p-3 rounded-full group-hover:scale-110 transition">
+        <FaLinkedinIn className="text-lg" />
+      </span>
+      <div>
+        <p className="font-semibold text-gray-900">LinkedIn</p>
+        <p className="text-sm text-gray-600">Corporate presence</p>
+      </div>
+    </a>
 
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
-                Request Call Back
-              </button>
-            </form>
-          </div>
+    {/* X / Twitter */}
+    <a
+      href="https://x.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
+    >
+      <span className="bg-black text-white p-3 rounded-full group-hover:scale-110 transition">
+        <FaXTwitter className="text-lg" />
+      </span>
+      <div>
+        <p className="font-semibold text-gray-900">X (Twitter)</p>
+        <p className="text-sm text-gray-600">Latest announcements</p>
+      </div>
+    </a>
 
-          {/* Address & Info */}
-          <div className="bg-white p-8 rounded-xl shadow-md border">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900">
-              Office Address
-            </h3>
+    {/* YouTube */}
+    <a
+      href="https://youtube.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
+    >
+      <span className="bg-red-600 text-white p-3 rounded-full group-hover:scale-110 transition">
+        <FaYoutube className="text-lg" />
+      </span>
+      <div>
+        <p className="font-semibold text-gray-900">YouTube</p>
+        <p className="text-sm text-gray-600">Project videos</p>
+      </div>
+    </a>
 
-            <div className="flex items-start gap-4 mb-6">
-              <FaMapMarkerAlt className="text-red-500 text-2xl mt-1" />
-              <p className="text-gray-600 leading-relaxed">
-                INSUS INFRATECH Private Limited<br />
-                Vidyalay Nagar, Jaipur<br />
-                Rajasthan, India
-              </p>
-            </div>
+  </div>
+</div>
 
-            <p className="text-gray-600 mb-2">
-              <strong>Working Hours:</strong>
-            </p>
-            <p className="text-gray-600">
-              Monday – Saturday<br />
-              9:00 AM – 6:00 PM
-            </p>
 
-            {/* Map (optional – safe placeholder) */}
-            <div className="mt-8 rounded-lg overflow-hidden">
-              <iframe
-                title="map"
-                src="https://maps.google.com/maps?q=Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                className="w-full h-48 border-0"
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
+  {/* ---------- Address & Info (UNCHANGED) ---------- */}
+  <div className="bg-white p-8 rounded-xl shadow-md border">
+    <h3 className="text-2xl font-semibold mb-6 text-gray-900">
+      Office Address
+    </h3>
 
-        </div>
+    <div className="flex items-start gap-4 mb-6">
+      <FaMapMarkerAlt className="text-red-500 text-2xl mt-1" />
+      <p className="text-gray-600 leading-relaxed">
+        INSUS INFRATECH Private Limited<br />
+        Vidyalay Nagar, Jaipur<br />
+        Rajasthan, India
+      </p>
+    </div>
+
+    <p className="text-gray-600 mb-2">
+      <strong>Working Hours:</strong>
+    </p>
+    <p className="text-gray-600">
+      Monday – Saturday<br />
+      9:00 AM – 6:00 PM
+    </p>
+
+    <div className="mt-8 rounded-lg overflow-hidden">
+      <iframe
+        title="map"
+        src="https://maps.google.com/maps?q=Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        className="w-full h-48 border-0"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+</div>
+
       </div>
     </section>
   );
