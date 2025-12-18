@@ -1,30 +1,38 @@
 import { Image } from "@imagekit/react";
-import { ClipLoader } from "react-spinners";
-import {motion} from 'motion/react'
+import { motion } from "motion/react";
+
 const Loader = () => {
   return (
-    <div className='fixed inset-0 z-[9999] flex justify-center items-center'>
-        <div className="absolute inset-0 bg-white opacity-20 backdrop-blur-xl"></div>
-        <div
-          className="flex flex-col gap-5 justify-center items-center"
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+      
+      {/* Glass Background */}
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-xl"></div>
+
+      {/* Loader Content */}
+      <div className="relative z-10 flex flex-col items-center gap-4">
+        
+        {/* Logo Animation */}
+        <motion.div
+          animate={{ scale: [1, 1.08, 1] }}
+          transition={{
+            duration: 1.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
-          <motion.div
-            initial={{scale:1.1}}
-            animate={{scale:1}}
-            transition={{duration:0.5, delay:0.2,repeat:Infinity,repeatType:"loop"}}
-            className="size-24"
-          >
-              <Image
-              src="/logo3.jpeg"
-              alt="logo"
-              className="w-full h-full rounded-full object-contain shadow-md cursor-pointer"
-              loading="lazy"
-              />
-          </motion.div>
+          <Image
+            src="/logo3.jpeg"
+            alt="INSUS Infratech logo"
+            className="w-24 h-24 rounded-full object-contain shadow-lg"
+            loading="lazy"
+          />
+        </motion.div>
 
-
-              <h1 className="text-xxl text-gray-600 font-medium">Loading Please wait ..</h1>
-        </div>
+        {/* Text */}
+        <p className="text-lg font-medium text-slate-700 tracking-wide">
+          Loading please wait ...
+        </p>
+      </div>
     </div>
   );
 };

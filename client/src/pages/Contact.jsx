@@ -155,13 +155,13 @@ const Contact = () => {
 
 
   {/* ---------- Address & Info (UNCHANGED) ---------- */}
-  <div className="bg-white p-8 rounded-xl shadow-md border">
-    <h3 className="text-3xl font-semibold mb-6 text-gray-900 flex items-center justify-between">
-      <span>Office Address</span>
+  <div className="bg-white px-4 py-2 rounded-xl shadow-md border lg:py-5">
+    <h3 className="text-xl font-semibold mb-6 text-gray-900 flex items-center justify-between lg:text-2xl">
+      <span className="tracking-wide">Office Address</span>
         <Image
             src="/logo3.jpeg"
             alt="logo"
-            className="size-20 rounded-full object-contain shadow-md cursor-pointer"
+            className="size-12 rounded-full object-contain shadow-md cursor-pointer lg:size-16"
               loading="lazy"
                 />
     </h3>
