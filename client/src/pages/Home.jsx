@@ -97,7 +97,7 @@ const Home = () => {
 
             <div className="flex flex-col items-center">
               <div className="text-3xl md:text-4xl font-bold text-amber-400">
-                <CountUp from={0} to={19} duration={1} />+
+                <CountUp from={0} to={20} duration={1} />+
               </div>
               <p className="text-xs md:text-sm text-gray-300 mt-1">Years Experience</p>
             </div>
