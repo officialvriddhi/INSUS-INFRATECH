@@ -382,8 +382,8 @@ const About = () => {
             </div>
 
             {/* 🔥 REQUIRED 8 EMPTY DIVS FOR 3D EFFECT */}
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
+            {/* <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div> */}
 
           </div>
         </motion.div>
@@ -514,7 +514,7 @@ const About = () => {
                 transition={{ delay: 0.4 }}
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(234, 179, 8, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black px-10 py-4 rounded-xl font-bold text-lg hover:from-yellow-400 hover:to-yellow-300 transition-all shadow-lg"
+                className="inline-flex items-center px-4 py-2 gap-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black md:px-10 md:py-4 rounded-xl font-bold text-lg hover:from-yellow-400 hover:to-yellow-300 transition-all shadow-lg"
               >
                 Get in Touch
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

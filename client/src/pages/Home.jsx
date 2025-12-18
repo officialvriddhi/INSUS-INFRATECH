@@ -71,15 +71,16 @@ const Home = () => {
 
           <span className="text-rotate mt-6 flex justify-end">
             <span className='h-fit'>
-              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
    bg-clip-text text-transparent">
                   " Infrastructure That Stands the Test of Time "
               </p>
-              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
  bg-clip-text text-transparent">
                   " Strong Foundations for a Stronger Tomorrow "
               </p>
-              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-teal-400 via-emerald-400 to-green-500 bg-clip-text text-transparent">
+              <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
+ bg-clip-text text-transparent">
                   " Engineering Excellence. Building the Future "
               </p>
 
