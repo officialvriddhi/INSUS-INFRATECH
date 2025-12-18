@@ -1,12 +1,18 @@
 import { Image } from "@imagekit/react";
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import {motion} from 'motion/react'
 
 const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="bg-base-200 text-base-content">
+    <motion.footer 
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8, ease: "easeOut" }}  
+    className="bg-base-200 text-base-content">
 
 
       <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 sm:grid-cols-2 md:grid-cols-4 items-start">
@@ -75,7 +81,7 @@ const Footer = () => {
 
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
