@@ -502,7 +502,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.3 }}
-                className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+                className="text-md text-gray-300 mb-8 max-w-3xl mx-auto px-1 md:text-xl"
               >
                 Planning a commercial or infrastructure project? INSUS Infratech is
                 your trusted construction partner.
