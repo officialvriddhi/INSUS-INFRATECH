@@ -359,7 +359,7 @@ const About = () => {
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
                 className="w-full h-56 mb-6 overflow-hidden rounded-xl shadow-md"
               >
-                <img
+                <Image
                   src={leader.img}
                   alt={leader.name}
                   className="w-full h-full object-cover"
