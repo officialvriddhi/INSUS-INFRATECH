@@ -20,7 +20,8 @@ const Loader = () => {
           />
 
         {/* Text */}
-        <p className="text-lg font-medium text-slate-700 tracking-wide">
+        <p 
+        className="text-lg font-medium text-slate-600 tracking-wide animate-bounce">
           Loading please wait ...
         </p>
       </div>
