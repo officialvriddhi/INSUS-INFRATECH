@@ -4,8 +4,7 @@ import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
-import { SiTrustpilot } from "react-icons/si";
-
+import { HiUserGroup } from "react-icons/hi2";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -114,7 +113,7 @@ const Home = () => {
 
             <div className="flex flex-col items-center">
               <div className="text-3xl md:text-4xl font-bold text-amber-400">
-                <SiTrustpilot />
+                <HiUserGroup />
               </div>
               <p className="text-xs md:text-sm text-gray-300 mt-1">
                 Customer Trusted
