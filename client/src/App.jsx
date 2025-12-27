@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import Loader from "./components/Loader"
 import LoadingProvider from "./context/Loading"
 import { ImageKitProvider } from '@imagekit/react';
+import Projects from "./components/Projects";
 
 
 
@@ -25,6 +26,13 @@ const Layout = ()=>{
     </>
   )
 }
+
+const projects = [
+  {
+    title:"title",
+    description:"jnjsdhbshdjsndhvsdhhbgvsd jh"
+  }
+]
 
 
 const Router = createBrowserRouter([
@@ -55,8 +63,12 @@ const Router = createBrowserRouter([
       },
       {
         path:'/work',
-        element:<Work/>
+        element:<Work/>,
       },
+                {
+            path:"/:city",
+            element:<Projects/>
+          },
       {
         path:'/services',
         element:<Services/>

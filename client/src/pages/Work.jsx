@@ -1,86 +1,82 @@
-import React from 'react'
-import Stack from '../components/HomeCarousel.jsx'
-import { Image } from '@imagekit/react';
-
+import React from "react";
+import { motion, useInView } from "motion/react";
+import { Image } from "@imagekit/react";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Work = () => {
+  const navigate = useNavigate();
 
-  const [stopScroll, setStopScroll] = React.useState(false);
-  const cardData = [
-    {
-      title: "Indore",
-      image: "https://ik.imagekit.io/officialvriddhi/insus-infratech/Indore.jpeg",
-      url: "htt[s://google.com",
-    },
-    {
-      title: "Jaipur",
-      image: "https://ik.imagekit.io/officialvriddhi/insus-infratech/Jaipur.jpeg?updatedAt=1766076377135",
-      url: "/home",
-
-    },
-    {
-      title: "Ayodhya",
-      image: "https://ik.imagekit.io/officialvriddhi/insus-infratech/Ayodhya.jpeg",
-      url: "/home",
-
-    },
-    {
-      title: "Lucknow",
-      image: "https://ik.imagekit.io/officialvriddhi/insus-infratech/Lucknow.jpeg",
-      url: "/home",
-
-    },
-    {
-      title: "Patna",
-      image: "https://ik.imagekit.io/officialvriddhi/insus-infratech/Patna.jpeg",
-      url: "/home",
-
-    },
+  const locations = [
+    { title: "Indore", image: "/Jaipur.jpeg" },
+    { title: "Jaipur", image: "/Jaipur.jpeg" },
+    { title: "Ayodhya", image: "/Ayodhya.jpeg" },
+    { title: "Lucknow", image: "/Lucknow.jpeg" },
+    { title: "Patna", image: "/Lucknow.jpeg" },
+    // { title: "Patna", image: "/Lucknow.jpeg" },
   ];
+
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.15 } },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <main>
-      <section className='mt-32 mb-20'>
-        <div className='m-100'>
-          <h1 className='text-7xl font-semibold text-center '>Structure That Define Standard</h1>
-          <p className='text-center'>Projects that we have previously worked on</p>
-        </div>
+      <section className="mt-32 mb-20 text-center">
+        <h1 className="text-7xl font-semibold">Structure That Define Standard</h1>
+        <p>Projects that we have previously worked on</p>
       </section>
-      <style>{`
-                .marquee-inner {
-                    animation: marqueeScroll linear infinite;
-                }
 
-                @keyframes marqueeScroll {
-                    0% {
-                        transform: translateX(0%);
-                    }
+      <section className="max-w-6xl mx-auto">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+          variants={containerVariants}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {locations.map((item, index) => (
+            <motion.div
+              key={item.title}
+              whileHover={{ y: -8 }}
+              variants={cardVariants}
+              className="relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100
+            shadow-md hover:shadow-xl transition-all group"
+              onClick={() => navigate(`/${item.title.toLowerCase()}`)}
+            >
+              {/* Image */}
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-            `}</style>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/20"></div>
 
-      <section className="overflow-hidden w-full relative max-w-screen-2xl mx-auto" onMouseEnter={() => setStopScroll(true)} onMouseLeave={() => setStopScroll(false)}>
-        <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
-        <div className="marquee-inner flex w-fit" style={{ animationPlayState: stopScroll ? "paused" : "running", animationDuration: cardData.length * 2500 + "ms" }}>
-          <div className="flex">
-            {[...cardData, ...cardData].map((card, index, url) => (
-              <div key={index} className="w-60 mx-4 h-[20rem] relative group hover:scale-90 transition-all duration-300 ">
-                <a href={url}><img src={card.image} alt="card" className="w-full h-full object-cover rounded-xl" /></a>
-                <div className="flex items-center justify-center px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 absolute bottom-0 backdrop-blur-md left-0 w-full h-full bg-black/20">
-                  <p className="text-white text-lg font-semibold text-center">{card.title}</p>
-                </div>
+              {/* Text */}
+              <div className="absolute bottom-4 left-4 z-10">
+                <h3 className="text-white text-lg font-semibold group-hover:text-amber-300">
+                  {item.title}
+                </h3>
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent" />
+            </motion.div>
+
+          ))}
+        </motion.div>
       </section>
 
-
+      <Outlet />
     </main>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;
