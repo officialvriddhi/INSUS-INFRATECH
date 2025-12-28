@@ -34,7 +34,7 @@ const Navbar = () => {
 
   // show navbar after scroll
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setVisible(latest > 80);
+    setVisible(latest > 60);
   });
 
   return (
