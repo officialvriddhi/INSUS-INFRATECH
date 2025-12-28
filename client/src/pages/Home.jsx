@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
 import { HiUserGroup } from "react-icons/hi2";
+import homevideo from '../assets/INSUS_INFRATECH_Home_Video.mp4'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,19 +19,19 @@ const Home = () => {
 
         {/* ---------- Background Video ---------- */}
         <div className="absolute inset-0 z-0">
-          <Video
-            src="/video1.MOV"
+          <video
+            src={homevideo}
             autoPlay
             muted
             loop
-            loading="eager"
+            loading="lazy"
             playsInline
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* ---------- Dark Overlay ---------- */}
-        <div className="absolute inset-0 bg-black/15 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
 
         {/* ---------- Content ---------- */}
         <div className="relative z-20 w-[100%] lg:w-[80%] mx-auto h-full 
