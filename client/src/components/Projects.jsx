@@ -19,18 +19,21 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen w-full flex justify-center">
-      <div className="max-w-5xl w-full p-6">
-        <h1 className="text-4xl font-bold">{citydata.name}</h1>
-        <p className="mb-6">{citydata.desc}</p>
+      <div className="max-w-7xl w-full p-6">
+        <h1 className="text-7xl font-bold text-center mt-10 mb-10 text-pink-800">{citydata.name}</h1>
+        <p className="mb-6 text-center text-2xl opacity-50">{citydata.desc}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {citydata.projects.map((p, i) => (
-            <div key={i} className="h-48 rounded-xl overflow-hidden">
-              <img
-                src={p.img}
-                alt={p.name}
-                className="w-full h-full object-cover"
-              />
+        <div className="flex flex-col gap-10 overflow-x-auto">
+          {citydata.projects.map((project, i) => (
+            <div key={i}>
+              <div className=' border w-6 text-center border-black rounded-3xl my-2'>{i+1}</div>
+             <div className='flex flex-row gap-20'>
+               <img className='rounded-xl w-96 h-80 border border-black' src={project.img} alt={project.title} />
+             <div>
+              <h3 className='text-4xl font-semibold'>{project.name}</h3>
+              <div className='text-lg w-[500px] mt-5'>{project.desc}</div>
+             </div>
+             </div>
             </div>
           ))}
         </div>
