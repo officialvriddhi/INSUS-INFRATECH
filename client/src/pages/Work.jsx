@@ -7,12 +7,9 @@ const Work = () => {
   const navigate = useNavigate();
 
   const locations = [
-    { title: "Indore", image: "/Jaipur.jpeg" },
-    { title: "Jaipur", image: "/Jaipur.jpeg" },
-    { title: "Ayodhya", image: "/Ayodhya.jpeg" },
-    { title: "Lucknow", image: "/Lucknow.jpeg" },
-    { title: "Patna", image: "/Lucknow.jpeg" },
-    { title: "Bhopal", image: "/Lucknow.jpeg" },
+    { title: "Hospitality Projects", image: "/Jaipur.jpeg" },
+    { title: "Corporate and Industrial Projects", image: "/Jaipur.jpeg" },
+    { title: "Residential and Others", image: "/Ayodhya.jpeg" },
   ];
 
   const ref = useRef(null);
@@ -30,15 +27,15 @@ const Work = () => {
 
   return (
     <main>
-      <section className="mt-32 mb-20 text-center">
+      <section className="mt-24 mb-20 text-center">
         <h1 className="text-7xl font-semibold">
           Structure That Define Standard
         </h1>
-        <p>Projects that we have previously worked on</p>
+        <p className="text-gray-500 font-semibold mt-6">Projects that we have previously worked on</p>
 
       </section>
 
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto mb-5">
         <button
           className="mb-5 mx-2 flex items-start justify-start gap-2 font-medium  mt-4"
         >
@@ -59,7 +56,7 @@ const Work = () => {
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           variants={containerVariants}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-rows-2 lg:grid-rows-3 gap-6"
         >
           {locations.map((item) => (
             <motion.div
@@ -78,7 +75,7 @@ const Work = () => {
               <div className="absolute inset-0 bg-black/20"></div>
 
               <div className="absolute bottom-4 left-4 z-10">
-                <h3 className="text-white text-lg font-semibold group-hover:text-amber-300">
+                <h3 className="text-white text-4xl font-semibold group-hover:text-amber-300">
                   {item.title}
                 </h3>
               </div>

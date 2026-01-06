@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import workdata from '../data.js'
 import { Image } from "@imagekit/react";
+import ImageSlider from "./ImageSlider";
 
 
 const Projects = () => {
@@ -28,12 +29,24 @@ const Projects = () => {
             <div key={i}>
               <div className=' border w-6 text-center border-black rounded-3xl my-2'>{i + 1}</div>
               <div className='flex flex-row gap-20  '>
-                <div className='overflow-hidden  w-96 h-80 rounded-xl'>
-                  <img className='rounded-xl  w-96 h-80 border border-black hover:scale-110 transition-transform duration-300' src={project.img} alt={project.title} />
-                </div>
                 <div>
-                  <h3 className='text-4xl font-semibold'>{project.name}</h3>
-                  <div className='text-lg w-[500px] mt-5 '>{project.desc}</div>
+                  <ImageSlider images={project.img} />
+                </div>
+
+                <div>
+                  <h3 className="text-4xl font-semibold">{project.name}</h3>
+                  {project.overview && (
+                    <p className="mt-3 opacity-70">{project.overview}</p>
+                  )}
+
+                  {project.keyFeatures && (
+                    <ul className="mt-4 list-disc pl-5 space-y-2">
+                      {project.keyFeatures.map((feature, i) => (
+                        <li key={i}>{feature}</li>
+                      ))}
+                    </ul>
+                  )}
+
                 </div>
               </div>
             </div>
