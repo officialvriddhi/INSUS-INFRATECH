@@ -7,9 +7,9 @@ const Work = () => {
   const navigate = useNavigate();
 
   const locations = [
-    { title: "Hospitality Projects", image: "/Jaipur.jpeg" },
-    { title: "Corporate and Industrial Projects", image: "/Jaipur.jpeg" },
-    { title: "Residential and Others", image: "/Ayodhya.jpeg" },
+    { title: "Hospitality Projects", image: "/hospitality.jpg" },
+    { title: "Corporate and Industrial Projects", image: "/industrial.webp" },
+    { title: "Residential and Others", image: "/residential.webp" },
   ];
 
   const ref = useRef(null);
@@ -82,6 +82,9 @@ const Work = () => {
             </motion.div>
           ))}
         </motion.div>
+      </section>
+      <section>
+
       </section>
 
       <Outlet />

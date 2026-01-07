@@ -133,33 +133,72 @@ const workdata = [
         desc: "Our corporate and industrial portfolio highlights our expertise in delivering office, commercial, and industrial facilities through systematic execution and quality-driven construction practices. Each project is planned and executed to meet functional demands, regulatory requirements, and long-term performance expectations while maintaining strict adherence to timelines and safety standards.",
         projects: [
             {
-                name: "one",
-                desc: "jnknhsd",
+                name: "Wilo Industries - Vadodara, Jaipur, Indore",
+                overview:
+                    "Industrial facilities executed with a strong focus on functionality, operational efficiency, and durable construction practices to support manufacturing and industrial operations.",
+                keyFeatures: [
+                    "Industrial interior and functional layout planning aligned with operational workflows",
+                    "Optimized space utilization for efficient movement and process flow",
+                    "Use of robust, low-maintenance materials suitable for industrial environments",
+                    "Compliance with industrial safety norms and regulatory requirements",
+                    "Consistent execution across multiple locations with quality control"
+                ],
                 img: [
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
-                    "https://lh3.googleusercontent.com/proxy/ibgPkQx_IUDPLT_XWwJZmRURHFvn7w5oxr9LcpozdOd8I8AEm41Ch5ECU7jZ7Hq7HGGYRggtj9nf6X2CNgFs4FnJLxUve8GslE3PdPL9k1e9l7oIsXmMdLP0cNM9c9QeVJcaXvlKmJKeiFae_2vRgbTrEoDjQg=s1360-w1360-h1020-rw",
+                    "https://media.licdn.com/dms/image/v2/D4D22AQHV3rWRxiLSKA/feedshare-shrink_800/B4DZiJrymUGgAg-/0/1754656617699?e=2147483647&v=beta&t=n1ecUtm-vvxMnCh1D94gtqciTjz-3vOSEOo7kA85H7w",
+                    "https://images.jdmagicbox.com/v2/comp/indore/w5/0731px731.x731.150401160029.x4w5/catalogue/wilo-pumps-pvt-ltd-indore-gpo-indore-submersible-pump-manufacturers-xoo6b1jy24.jpg",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
                 ]
-
             },
             {
-                name: "two",
-                desc: "jnknhsd",
+                name: "Dainik Bhaskar - Patna, Muzaffarpur, Bhopal",
+                overview:
+                    "Corporate office infrastructure executed to support large-scale media operations, focusing on functional planning, efficient workflows, and reliable construction standards across multiple locations.",
+                keyFeatures: [
+                    "Office interiors planned to support newsroom, editorial, and administrative functions",
+                    "Functional workspace layouts designed for high-activity media operations",
+                    "Durable materials selected for continuous daily usage",
+                    "Execution aligned with corporate infrastructure standards and timelines",
+                    "Consistent delivery across multiple cities with quality and safety compliance"
+                ],
                 img: [
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
+                    "https://content3.jdmagicbox.com/v2/comp/bhopal/r5/0755px755.x755.140529123019.v9r5/catalogue/dainik-bhaskar-m-p-nagar-bhopal-newspaper-vendors-xgJ2S3nuFy.jpg",
+                    "https://content3.jdmagicbox.com/v2/comp/bhopal/r5/0755px755.x755.140529123019.v9r5/catalogue/dainik-bhaskar-m-p-nagar-bhopal-newspaper-vendors-xgJ2S3nuFy.jpg",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
                 ]
             },
             {
-                name: "three",
-                desc: "jnknhsd",
+                name: "Spinny - Pan-India",
+                overview:
+                    "Corporate and retail infrastructure executed across multiple locations with a focus on brand consistency, functional layouts, and efficient execution to support customer-facing and operational requirements.",
+                keyFeatures: [
+                    "Brand-aligned retail and operational interior execution",
+                    "Consistent design and construction standards across multiple locations",
+                    "Functional layouts supporting customer flow and backend operations",
+                    "Durable finishes suitable for high-traffic retail environments",
+                    "Timely execution with adherence to safety and quality standards"
+                ],
+                img: [
+                    "https://mda.spinny.com/sp-file-system/public/2024-01-22/bcfce0d01b0a4f9cb58cfb72ab069940/raw/file.jpeg?q=85",
+                    "https://images.jdmagicbox.com/v2/comp/delhi/l7/011pxx11.xx11.240731130810.z7l7/catalogue/spinn-car-hub-rcube-monad-mall-rajouri-garden-delhi-apbhuidcq5.jpg",
+                    "https://spn-mda.spinny.com/img/JXAcbbV2RZOblgw8kLnnQA/raw/file.jpeg?q=85"
+                ]
+            },
+            {
+                name: "Maruti True Value - Lucknow",
+                overview:
+                    "Commercial showroom infrastructure executed to support vehicle display, customer engagement, and efficient operational flow in alignment with Maruti True Value brand standards.",
+                keyFeatures: [
+                    "Showroom interior execution aligned with automotive brand guidelines",
+                    "Optimized layout planning for vehicle display and customer movement",
+                    "Functional customer interaction and sales zones",
+                    "Durable finishes suitable for high-footfall commercial environments",
+                    "Timely execution with adherence to safety and quality standards"
+                ],
                 img: [
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
                 ]
-
             },
         ]
     },
@@ -168,87 +207,41 @@ const workdata = [
         desc: "Our residential and specialized projects demonstrate a commitment to quality construction, efficient execution, and compliance with applicable standards. Across varied project types, we deliver solutions that emphasize functionality, durability, and responsible construction practices aligned with client requirements.",
         projects: [
             {
-                name: "one",
-                desc: "jnknhsd",
+                name: "Dangayach Group",
+                overview:
+                    "Large-scale residential real estate development executed with a focus on structured planning, construction quality, and long-term durability to support modern urban living requirements.",
+                keyFeatures: [
+                    "Execution of large-scale residential development projects",
+                    "Structured planning aligned with real estate development standards",
+                    "Use of durable construction materials for long-term performance",
+                    "Coordination across civil and allied construction works",
+                    "Compliance with safety norms, quality benchmarks, and timelines"
+                ],
                 img: [
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
-                    "https://lh3.googleusercontent.com/proxy/ibgPkQx_IUDPLT_XWwJZmRURHFvn7w5oxr9LcpozdOd8I8AEm41Ch5ECU7jZ7Hq7HGGYRggtj9nf6X2CNgFs4FnJLxUve8GslE3PdPL9k1e9l7oIsXmMdLP0cNM9c9QeVJcaXvlKmJKeiFae_2vRgbTrEoDjQg=s1360-w1360-h1020-rw",
+                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
                 ]
-
             },
             {
-                name: "two",
-                desc: "jnknhsd",
+                name: "Millinia Residence",
+                overview:
+                    "Luxury residential furnishing projects delivered with an emphasis on refined interiors, functional planning, and high-quality finishes tailored to premium living environments.",
+                keyFeatures: [
+                    "Luxury residential interior furnishing execution",
+                    "Custom-designed living spaces focused on comfort and aesthetics",
+                    "High-quality finishes and material selection",
+                    "Efficient coordination for timely residential project delivery",
+                    "Execution aligned with client specifications and quality standards"
+                ],
                 img: [
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
                     "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
                 ]
-            },
-            {
-                name: "three",
-                desc: "jnknhsd",
-                img: [
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no",
-                    "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-                ]
-
             },
         ]
     },
-    // {
-    //     name: "Indore",
-    //     desc: "xyz",
-    //     projects: [
-    //         {
-    //             name: "one",
-    //             desc: "jnknhsd",
-    //             img: "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-
-
-    //         },
-    //         {
-    //             name: "two",
-    //             desc: "jnknhsd",
-    //             img: "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-
-
-    //         },
-    //         {
-    //             name: "three",
-    //             desc: "jnknhsd",
-    //             img: "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-
-
-    //         },
-    //     ]
-    // }, {
-    //     name: "Ayodhya",
-    //     desc: "In Ayodhya, our projects reflect a thoughtful blend of modern hospitality design and the city’s cultural significance. With a strong focus on quality, functionality, and refined interiors, these developments contribute to Ayodhya’s growing urban landscape while enhancing the overall hospitality experience with dignity and respect for its heritage.",
-    //     projects: [
-    //         {
-    //             name: "Cygnett Collection KK Hotel",
-    //             desc: "This hospitality project adopts a modern and functional design approach, focusing on efficient space planning, contemporary interiors, and a clean aesthetic. The emphasis is on comfort, practicality, and consistent brand standards, catering to both business and short-stay travelers.",
-    //             img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/f7/09/9f/caption.jpg?w=900&h=500&s=1"
-    //         },
-    //         {
-    //             name: "two",
-    //             desc: "jnknhsd",
-    //             img: "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-
-
-    //         },
-    //         {
-    //             name: "three",
-    //             desc: "jnknhsd",
-    //             img: "https://lh3.googleusercontent.com/p/AF1QipPIWlafTzLv3_qC5f1vOQxcYqfSDuBL5ZNTODc1=w324-h312-n-k-no"
-
-
-    //         },
-    //     ]
-    //  },
 ]
 
 export default workdata

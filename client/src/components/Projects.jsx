@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import workdata from '../data.js'
-import { Image } from "@imagekit/react";
 import ImageSlider from "./ImageSlider";
 
 
