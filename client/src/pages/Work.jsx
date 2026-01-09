@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Image } from "@imagekit/react";
+import workdata from '../data.js'
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Work = () => {
@@ -25,13 +26,20 @@ const Work = () => {
     show: { opacity: 1, y: 0 },
   };
 
+
+  const project = workdata
+    .find(section => section.name === "Hospitality Projects")
+    .projects.find(p => p.name === "Ramada by Wyndham - Jaipur");
+
+
+
   return (
     <main>
       <section className="mt-24 mb-20 text-center">
         <h1 className="text-7xl font-semibold">
           Structure That Define Standard
         </h1>
-        <p className="text-gray-500 font-semibold mt-6">Projects that we have previously worked on</p>
+        <p className="text-gray-500 font-semibold mt-6">Projects we delivered with disciplined execution, quality construction practices, and adherence to timelines and standards.</p>
 
       </section>
 
@@ -61,7 +69,6 @@ const Work = () => {
           {locations.map((item) => (
             <motion.div
               key={item.title}
-              whileHover={{ y: -8 }}
               variants={cardVariants}
               className="relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
               onClick={() => navigate(`/${item.title.toLowerCase()}`)}
@@ -83,8 +90,10 @@ const Work = () => {
           ))}
         </motion.div>
       </section>
-      <section>
-
+      <section className="flex flex-row">
+        <h1 className="text-5xl font-bold text-center mt-20 mb-10" >Our Recent Work</h1>
+        <div>project.img[i]</div>
+        <div>project.desc</div>
       </section>
 
       <Outlet />
