@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Image } from "@imagekit/react";
-import workdata from '../data.js'
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Work = () => {
@@ -27,12 +26,7 @@ const Work = () => {
   };
 
 
-  const project = workdata
-    .find(section => section.name === "Hospitality Projects")
-    .projects.find(p => p.name === "Ramada by Wyndham - Jaipur");
-
-
-
+  
   return (
     <main>
       <section className="mt-24 mb-20 text-center">
@@ -70,7 +64,7 @@ const Work = () => {
             <motion.div
               key={item.title}
               variants={cardVariants}
-              className="relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
+              className="m-3 relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
               onClick={() => navigate(`/${item.title.toLowerCase()}`)}
             >
               <Image
