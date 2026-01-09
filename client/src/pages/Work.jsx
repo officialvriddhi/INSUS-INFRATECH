@@ -90,12 +90,6 @@ const Work = () => {
           ))}
         </motion.div>
       </section>
-      <section className="flex flex-row">
-        <h1 className="text-5xl font-bold text-center mt-20 mb-10" >Our Recent Work</h1>
-        <div>project.img[i]</div>
-        <div>project.desc</div>
-      </section>
-
       <Outlet />
     </main>
   );
