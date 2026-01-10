@@ -3,6 +3,7 @@ import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { FaCheckCircle, FaArrowRight } from 'react-icons/fa'
 import { Image } from '@imagekit/react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const About = () => {
   const heroRef = useRef(null)
@@ -96,7 +97,7 @@ const About = () => {
     { value: "10+", label: "Cities Served" },
     { value: "Multiple", label: "Industry Sectors" }
   ]
-
+const navigate = useNavigate()
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden" id='about'>
       {/* Hero Section */}
@@ -504,8 +505,9 @@ const About = () => {
                 Planning a commercial or infrastructure project? INSUS Infratech is
                 your trusted construction partner.
               </motion.p>
-              <motion.a
-                href="/contact"
+              <motion.p
+                // to={"/contact"}
+                onClick={()=>navigate('/contact')}
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.4 }}
@@ -515,7 +517,7 @@ const About = () => {
               >
                 Get in Touch
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              </motion.p>
             </div>
           </motion.div>
         </motion.div>
