@@ -29,17 +29,17 @@ const Work = () => {
   
   return (
     <main>
-      <section className="mt-24 mb-20 text-center">
-        <h1 className="text-7xl font-semibold">
+      <section className="mt-12 mb-10 md:mt-24 md:mb-20 text-center">
+        <h1 className="text-5xl  md:text-7xl font-semibold mx-2 opacity-80">
           Structure That Define Standard
         </h1>
-        <p className="text-gray-500 font-semibold mt-6">Projects we delivered with disciplined execution, quality construction practices, and adherence to timelines and standards.</p>
+        <p className="text-gray-500 font-semibold mt-2">Projects we delivered with disciplined execution, quality construction practices, and adherence to timelines and standards.</p>
 
       </section>
 
       <section className="max-w-6xl mx-auto mb-5">
         <button
-          className="mb-5 mx-2 flex items-start justify-start gap-2 font-medium  mt-4"
+          className=" mx-4 flex items-start justify-start gap-2 font-medium  mt-4"
         >
           Click to know more
           <motion.span
