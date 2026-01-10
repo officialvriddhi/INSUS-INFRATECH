@@ -6,7 +6,7 @@ const ImageSlider = ({ images }) => {
   return (
     <div className="flex gap-4">
       {/* MAIN IMAGE */}
-      <div className="w-96 h-64 overflow-hidden rounded-lg">
+      <div className="w-56 h-52 sm:w-96 sm:h-64 overflow-hidden rounded-lg ">
         <img
           src={images[active]}
           className="w-full h-full object-cover transition-opacity duration-300"

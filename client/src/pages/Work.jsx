@@ -25,13 +25,15 @@ const Work = () => {
     show: { opacity: 1, y: 0 },
   };
 
+
+  
   return (
     <main>
       <section className="mt-24 mb-20 text-center">
         <h1 className="text-7xl font-semibold">
           Structure That Define Standard
         </h1>
-        <p className="text-gray-500 font-semibold mt-6">Projects that we have previously worked on</p>
+        <p className="text-gray-500 font-semibold mt-6">Projects we delivered with disciplined execution, quality construction practices, and adherence to timelines and standards.</p>
 
       </section>
 
@@ -61,9 +63,8 @@ const Work = () => {
           {locations.map((item) => (
             <motion.div
               key={item.title}
-              whileHover={{ y: -8 }}
               variants={cardVariants}
-              className="relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
+              className="m-3 relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
               onClick={() => navigate(`/${item.title.toLowerCase()}`)}
             >
               <Image
@@ -83,10 +84,6 @@ const Work = () => {
           ))}
         </motion.div>
       </section>
-      <section>
-
-      </section>
-
       <Outlet />
     </main>
   );

@@ -20,20 +20,19 @@ const Projects = () => {
   return (
     <div className="min-h-screen w-full flex justify-center">
       <div className="max-w-7xl w-full p-6">
-        <h1 className="text-7xl font-bold text-center mt-10 mb-10 text-pink-800">{citydata.name}</h1>
-        <p className="mb-6 text-center text-2xl opacity-50">{citydata.desc}</p>
+        <h1 className="text-5xl md:text-7xl font-bold text-center mt-10 mb-10 text-pink-800">{citydata.name}</h1>
+        <p className="mb-6 text-center text-xl md:text-2xl opacity-50">{citydata.desc}</p>
 
-        <div className="flex flex-col gap-10 overflow-x-auto">
+        <div className="flex flex-col gap-10 mt-20 md:mt-32">
           {citydata.projects.map((project, i) => (
             <div key={i}>
-              <div className=' border w-6 text-center border-black rounded-3xl my-2'>{i + 1}</div>
-              <div className='flex flex-row gap-20  '>
-                <div>
+              <div className='flex flex-row gap-16 md:gap-20  flex-wrap lg:flex-nowrap justify-center lg:justify-start '>
+                <div className=''>
                   <ImageSlider images={project.img} />
                 </div>
 
                 <div>
-                  <h3 className="text-4xl font-semibold">{project.name}</h3>
+                  <h3 className="text-3xl md:text-4xl font-semibold">{project.name}</h3>
                   {project.overview && (
                     <p className="mt-3 opacity-70">{project.overview}</p>
                   )}
