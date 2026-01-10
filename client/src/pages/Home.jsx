@@ -6,6 +6,10 @@ import { Video } from '@imagekit/react';
 import CountUp from '../components/Counter.jsx';
 import { HiUserGroup } from "react-icons/hi2";
 import homevideo from '../assets/INSUS_INFRATECH_Home_Video.mp4'
+import About from './About.jsx';
+import Work from './Work.jsx';
+import Services from './Services.jsx';
+import Contact from './Contact.jsx';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -150,7 +154,10 @@ const Home = () => {
       bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300" />
 
       {/* About Section */}
-      {/* <About /> */}
+      <About />
+      <Work/>
+      <Services/>
+      <Contact/>
     </>
   );
 };
