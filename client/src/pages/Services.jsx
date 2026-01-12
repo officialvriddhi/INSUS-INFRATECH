@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { FaBuilding, FaHotel, FaShoppingBag, FaTools, FaCity, FaArrowRight } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {useNavigate} from 'react-router-dom'
+import scrollToTop from "../utils/ScrollToTop";
 
 const services = [
   {
@@ -113,7 +115,15 @@ const ServiceCard = ({ service, index }) => {
   );
 };
 
+
+
 const Services = () => {
+
+  useEffect(()=>{
+    scrollToTop();
+  },[])
+
+  const navigate = useNavigate()
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,10 +166,10 @@ const Services = () => {
             Our team of experts is here to bring your vision to life. Get in touch with us today for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+            {/* <button className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
               Get a Free Quote
-            </button>
-            <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+            </button> */}
+            <button onClick={()=>navigate('/contact')} className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
               Contact Our Team
             </button>
           </div>

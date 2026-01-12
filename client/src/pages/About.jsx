@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { FaCheckCircle, FaArrowRight } from 'react-icons/fa'
 import { Image } from '@imagekit/react';
 import { Link, useNavigate } from 'react-router-dom';
+import scrollToTop from '../utils/ScrollToTop';
 
 const About = () => {
   const heroRef = useRef(null)
@@ -98,6 +99,10 @@ const About = () => {
     { value: "Multiple", label: "Industry Sectors" }
   ]
 const navigate = useNavigate()
+
+  useEffect(()=>{
+    scrollToTop();
+  },[])
   return (
     <>
     <section className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden" id='about'>

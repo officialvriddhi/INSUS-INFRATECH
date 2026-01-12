@@ -1,10 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Image } from "@imagekit/react";
 import { Outlet, useNavigate } from "react-router-dom";
+import scrollToTop from "../utils/ScrollToTop";
 
 const Work = () => {
   const navigate = useNavigate();
+
+    useEffect(()=>{
+    scrollToTop();
+  },[])
 
 const locations = [
   { title: "Hospitality Projects", slug: "hospitality-projects", image: "/hospitality.jpg" },

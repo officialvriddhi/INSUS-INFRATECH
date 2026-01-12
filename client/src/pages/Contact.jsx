@@ -9,6 +9,7 @@ import {
 import { SiGooglemeet } from "react-icons/si";
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import scrollToTop from "../utils/ScrollToTop";
 
 
 
@@ -20,6 +21,10 @@ const Contact = () => {
       cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
     })();
   }, [])
+
+    useEffect(()=>{
+    scrollToTop();
+  },[])
 
   return (
     <>

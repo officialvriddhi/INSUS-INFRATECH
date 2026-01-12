@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SplitText from '../components/SplitText.jsx';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
@@ -11,10 +11,15 @@ import Work from './Work.jsx';
 import Services from './Services.jsx';
 import Contact from './Contact.jsx';
 import { Helmet } from 'react-helmet-async';
+import scrollToTop from '../utils/ScrollToTop.jsx';
 
 
 const Home = () => {
   const navigate = useNavigate();
+
+    useEffect(()=>{
+    scrollToTop();
+  },[])
 
 
 
