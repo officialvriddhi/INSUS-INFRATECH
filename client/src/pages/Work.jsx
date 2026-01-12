@@ -6,11 +6,12 @@ import { Outlet, useNavigate } from "react-router-dom";
 const Work = () => {
   const navigate = useNavigate();
 
-  const locations = [
-    { title: "Hospitality Projects", image: "/hospitality.jpg" },
-    { title: "Corporate and Industrial Projects", image: "/industrial.webp" },
-    { title: "Residential and Others", image: "/residential.webp" },
-  ];
+const locations = [
+  { title: "Hospitality Projects", slug: "hospitality-projects", image: "/hospitality.jpg" },
+  { title: "Corporate and Industrial Projects", slug: "corporate-and-industrial-projects", image: "/industrial.webp" },
+  { title: "Residential and Others", slug: "residential-and-others", image: "/residential.webp" },
+];
+
 
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -65,7 +66,7 @@ const Work = () => {
               key={item.title}
               variants={cardVariants}
               className="m-3 relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
-              onClick={() => navigate(`/${item.title.toLowerCase()}`)}
+              onClick={() => navigate(`city/${item.slug.toLowerCase()}`)}
             >
               <Image
                 src={item.image}

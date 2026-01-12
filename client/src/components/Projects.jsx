@@ -10,7 +10,7 @@ const Projects = () => {
 
   useEffect(() => {
     const data = workdata.find(
-      item => item.name.toLowerCase() === city.toLowerCase()
+      item => item.slug.toLowerCase() === city.toLowerCase()
     );
     setCityData(data);
   }, [city]);

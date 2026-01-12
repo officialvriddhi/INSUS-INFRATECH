@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       { path: "work", element: <Work /> },   // /work
       { path: "services", element: <Services /> }, // /services
       { path: "contact", element: <Contact /> },   // /contact
-      { path: ":city", element: <Projects /> },    // /delhi, /mumbai
+      { path: "work/city/:city", element: <Projects /> },    // /delhi, /mumbai
     ],
   },
   {

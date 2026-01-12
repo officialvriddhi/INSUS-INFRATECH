@@ -3,6 +3,7 @@
 const workdata = [
     {
         name: "Hospitality Projects",
+        slug: "hospitality-projects",
         desc: "Our hospitality projects are executed with a strong focus on functionality, compliance, and build quality. We deliver end-to-end solutions covering civil works, interior fit-outs, and MEP coordination, ensuring that each project meets brand standards, safety norms, and operational demands.",
         projects: [
             {
@@ -130,6 +131,7 @@ const workdata = [
     },
     {
         name: "Corporate and Industrial Projects",
+        slug: "corporate-and-industrial-projects",
         desc: "Our corporate and industrial portfolio highlights our expertise in delivering office, commercial, and industrial facilities through systematic execution and quality-driven construction practices. Each project is planned and executed to meet functional demands, regulatory requirements, and long-term performance expectations while maintaining strict adherence to timelines and safety standards.",
         projects: [
             {
@@ -204,6 +206,7 @@ const workdata = [
     },
     {
         name: "Residential and Others",
+        slug: "residential-and-others",
         desc: "Our residential and specialized projects demonstrate a commitment to quality construction, efficient execution, and compliance with applicable standards. Across varied project types, we deliver solutions that emphasize functionality, durability, and responsible construction practices aligned with client requirements.",
         projects: [
             {
