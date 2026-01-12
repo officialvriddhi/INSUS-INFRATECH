@@ -11,6 +11,7 @@ import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
 
+
 const Contact = () => {
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const Contact = () => {
   }, [])
 
   return (
+    <>
     <section className="w-full py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -208,6 +210,8 @@ const Contact = () => {
 
       </div>
     </section>
+
+    </>
   );
 };
 

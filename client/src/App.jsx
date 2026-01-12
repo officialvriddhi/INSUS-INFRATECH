@@ -3,6 +3,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Loader from "./components/Loader";
 import LoadingProvider from "./context/Loading";
 import { ImageKitProvider } from "@imagekit/react";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import SEO from './utils/Seo.jsx'
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -44,13 +46,23 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <LoadingProvider>
-      <ImageKitProvider urlEndpoint="https://ik.imagekit.io/officialvriddhi/insus-infratech">
-        <Suspense fallback={<Loader />}>
-          <RouterProvider router={router} />
-        </Suspense>
-      </ImageKitProvider>
-    </LoadingProvider>
+    <HelmetProvider>
+      <LoadingProvider>
+        <ImageKitProvider urlEndpoint="https://ik.imagekit.io/officialvriddhi/insus-infratech">
+          <Suspense fallback={<Loader />}>
+            <RouterProvider router={router} />
+                  <SEO
+          title="Insus Infratech | Best Building Contractors in India"
+          description="Insus Infratech provides residential, commercial and industrial construction services in india with 20+ years experience."
+          keywords="construction company in india, building contractor near me , building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
+          url="https://insus-infratech.vercel.app/"
+          image="https://ik.imagekit.io/officialvriddhi/insus-infratech/logo3.jpeg?updatedAt=1765982258636"
+
+          />
+          </Suspense>
+        </ImageKitProvider>
+      </LoadingProvider>
+    </HelmetProvider>
   );
 }
 

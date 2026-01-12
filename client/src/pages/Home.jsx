@@ -10,6 +10,8 @@ import About from './About.jsx';
 import Work from './Work.jsx';
 import Services from './Services.jsx';
 import Contact from './Contact.jsx';
+import { Helmet } from 'react-helmet-async';
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,6 +20,32 @@ const Home = () => {
 
   return (
     <>
+
+    <Helmet>
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "ConstructionBusiness",
+          "name": "Insus Infratech Ltd",
+          "url": "https://insus-infratech.vercel.app",
+          "telephone": "+91-9XXXXXXXXX",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressCountry": "IN"
+          },
+          "areaServed": "India",
+          "sameAs": [
+            "https://www.facebook.com/insusinfratech",
+            "https://www.linkedin.com/company/insusinfratech"
+          ]
+        }
+        `}
+      </script>
+</Helmet>
+
+
       {/* ================= HERO SECTION ================= */}
       <main className="relative h-screen w-full overflow-hidden" id='home'>
 

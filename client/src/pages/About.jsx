@@ -99,6 +99,7 @@ const About = () => {
   ]
 const navigate = useNavigate()
   return (
+    <>
     <section className="bg-gradient-to-b from-gray-50 to-white text-gray-800 overflow-hidden" id='about'>
       {/* Hero Section */}
 <section
@@ -523,6 +524,7 @@ const navigate = useNavigate()
         </motion.div>
       </section>
     </section>
+    </>
   );
 };
 
