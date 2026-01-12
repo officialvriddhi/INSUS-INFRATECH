@@ -66,7 +66,7 @@ const locations = [
               key={item.title}
               variants={cardVariants}
               className="m-3 relative h-80 rounded-xl overflow-hidden cursor-pointer border border-gray-100 shadow-md hover:shadow-xl transition-all group"
-              onClick={() => navigate(`city/${item.slug.toLowerCase()}`)}
+              onClick={() => navigate(`${window.location.href ==='/work'?`/${item.slug}`:`/work/${item.slug}`}`)}
             >
               <Image
                 src={item.image}

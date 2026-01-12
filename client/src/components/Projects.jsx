@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 import workdata from '../data.js'
 import ImageSlider from "./ImageSlider";
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
 const Projects = () => {
   const { city } = useParams();
@@ -14,6 +17,10 @@ const Projects = () => {
     );
     setCityData(data);
   }, [city]);
+
+  useEffect(()=>{
+    scrollToTop()
+  },[])
 
   if (!citydata) return null;
 

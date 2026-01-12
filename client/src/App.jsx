@@ -32,10 +32,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },   // /
       { path: "about", element: <About /> }, // /about
-      { path: "work", element: <Work /> },   // /work
       { path: "services", element: <Services /> }, // /services
       { path: "contact", element: <Contact /> },   // /contact
-      { path: "work/city/:city", element: <Projects /> },    // /delhi, /mumbai
+      { path: "work", element: <Work />},   // /work
+      { path: "work/:city", element: <Projects /> },    // /delhi, /mumbai
     ],
   },
   {
@@ -54,7 +54,7 @@ function App() {
                   <SEO
           title="Insus Infratech | Best Building Contractors in India"
           description="Insus Infratech provides residential, commercial and industrial construction services in india with 20+ years experience."
-          
+
           keywords="construction company in india, building contractor near me , insus infratech , insus , infratech , contruction ,building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
           url="https://insus-infratech.vercel.app/"
           image="https://ik.imagekit.io/officialvriddhi/insus-infratech/logo3.jpeg?updatedAt=1765982258636"
