@@ -105,9 +105,9 @@ const ServiceCard = ({ service, index }) => {
             </li>
           ))}
         </ul>
-        <button className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+        {/* <button className="flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
           Learn more <FaArrowRight className="ml-2" />
-        </button>
+        </button> */}
       </div>
     </motion.div>
   );
