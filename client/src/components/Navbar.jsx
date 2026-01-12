@@ -25,6 +25,10 @@ const navItems = [
   { name: "Contact", path: "/contact" },
 ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
 const Navbar = () => {
   const { scrollY } = useScroll();
   const [visible, setVisible] = useState(false);
@@ -69,6 +73,7 @@ const Navbar = () => {
               <motion.li key={item.name} variants={itemVariants}>
                 <NavLink
                   to={item.path}
+                  onClick={scrollToTop}
                   className={({ isActive }) =>
                     isActive
                       ? "font-semibold underline underline-offset-4"
@@ -116,7 +121,10 @@ const Navbar = () => {
             <motion.li key={item.name} variants={itemVariants}>
               <NavLink
                 to={item.path}
-                onClick={() => setMenuOpen(false)}
+                onClick={() =>{ 
+                  setMenuOpen(false)
+                  scrollToTop()
+                }}
                 className={({ isActive }) =>
                   isActive
                     ? "font-semibold underline underline-offset-4"

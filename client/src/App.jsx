@@ -54,7 +54,8 @@ function App() {
                   <SEO
           title="Insus Infratech | Best Building Contractors in India"
           description="Insus Infratech provides residential, commercial and industrial construction services in india with 20+ years experience."
-          keywords="construction company in india, building contractor near me , building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
+          
+          keywords="construction company in india, building contractor near me , insus infratech , insus , infratech , contruction ,building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
           url="https://insus-infratech.vercel.app/"
           image="https://ik.imagekit.io/officialvriddhi/insus-infratech/logo3.jpeg?updatedAt=1765982258636"
 
