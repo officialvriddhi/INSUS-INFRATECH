@@ -22,6 +22,7 @@ const Home = () => {
     <>
 
     <Helmet>
+      <meta name="google-site-verification" content="kjIYPSMXCv6dZPh7Rz1mxbNFN4zc89GhNlbvw1ERfi0" />
       <script type="application/ld+json">
         {`
         {
@@ -43,7 +44,7 @@ const Home = () => {
         }
         `}
       </script>
-</Helmet>
+    </Helmet>
 
 
       {/* ================= HERO SECTION ================= */}
