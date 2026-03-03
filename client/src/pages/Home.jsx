@@ -42,6 +42,10 @@ const Home = () => {
             "addressCountry": "IN"
           },
           "areaServed": "India",
+          "sameAs": [
+            "https://www.facebook.com/insusinfratech",
+            "https://www.linkedin.com/company/insusinfratech"
+          ]
         }
         `}
       </script>
