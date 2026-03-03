@@ -54,13 +54,13 @@ const Contact = () => {
 
           {/* Call */}
           <a
-            href="tel:+919702755165"
+            href="tel:+919304561465"
             className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
           >
             <FaPhoneAlt className="text-green-600 text-2xl" />
             <div>
               <h4 className="font-semibold text-gray-900">Call Us</h4>
-              <p className="text-gray-600">+91 9702613313</p>
+              <p className="text-gray-600">+91 9304561465</p>
             </div>
           </a>
 
