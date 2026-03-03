@@ -34,7 +34,7 @@ const Home = () => {
           "@context": "https://schema.org",
           "@type": "ConstructionBusiness",
           "name": "Insus Infratech Ltd",
-          "url": "https://insus-infratech.vercel.app",
+          "url": "https://www.insusinfra.com/",
           "telephone": "+91-9XXXXXXXXX",
           "address": {
             "@type": "PostalAddress",
@@ -42,10 +42,6 @@ const Home = () => {
             "addressCountry": "IN"
           },
           "areaServed": "India",
-          "sameAs": [
-            "https://www.facebook.com/insusinfratech",
-            "https://www.linkedin.com/company/insusinfratech"
-          ]
         }
         `}
       </script>
