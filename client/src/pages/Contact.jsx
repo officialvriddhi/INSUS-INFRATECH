@@ -17,8 +17,8 @@ const Contact = () => {
 
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({"namespace":"consultation"});
-      cal("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      const cal = await getCalApi({"namespace":"client-consultation-insus-infra"});
+      cal("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
     })();
   }, [])
 
@@ -91,10 +91,10 @@ const Contact = () => {
           {/* WhatsApp */}
 <button
   className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
-    data-cal-namespace="consultation"
-    data-cal-link="shubham-sinha-xxiobo/consultation"
+data-cal-namespace="client-consultation-insus-infra"
+    data-cal-link="insusinfra/client-consultation-insus-infra"
     
-    data-cal-config='{"layout":"month_view"}'
+    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}'
 >
   <div className="rounded-full">
     <SiGooglemeet className="text-green-600 text-2xl " />
