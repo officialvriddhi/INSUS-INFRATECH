@@ -53,16 +53,28 @@ const Contact = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
 
           {/* Call */}
-          <a
-            href="tel:+919304561465"
-            className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
-          >
-            <FaPhoneAlt className="text-green-600 text-2xl" />
-            <div>
-              <h4 className="font-semibold text-gray-900">Call Us</h4>
-              <p className="text-gray-600">+91 9304561465</p>
-            </div>
-          </a>
+<a
+  href="tel:+919304561465"
+  className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
+>
+  <FaPhoneAlt className="text-green-600 text-2xl" />
+
+  <div>
+    <h4 className="font-semibold text-gray-900">Call Us</h4>
+
+    <p className="text-gray-600">
+      <a href="tel:+919929005173" className="hover:text-indigo-400">
+        +91 9929005173
+      </a>
+    </p>
+
+    <p className="text-gray-600">
+      <a href="tel:+917340302074" className="hover:text-indigo-400">
+        +91 7340302074
+      </a>
+    </p>
+  </div>
+</a>
 
           {/* Email */}
           <a
@@ -102,81 +114,10 @@ const Contact = () => {
         </div>
 
         {/* ---------- Form + Address ---------- */}
-<div className="grid md:grid-cols-2 gap-10 items-start">
+<div className="grid md:grid-cols-1 gap-10 items-start">
 
   {/* ---------- Social Media Links ---------- */}
-<div className="bg-white p-8 rounded-xl shadow-md border">
-  <h3 className="text-2xl font-semibold mb-6 text-gray-900">
-    Connect With Us
-  </h3>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-
-    {/* Facebook */}
-    <a
-      href="https://facebook.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
-    >
-      <span className="bg-blue-600 text-white p-3 rounded-full group-hover:scale-110 transition">
-        <FaFacebookF className="text-lg" />
-      </span>
-      <div>
-        <p className="font-semibold text-gray-900">Facebook</p>
-        <p className="text-sm text-gray-600">Follow our updates</p>
-      </div>
-    </a>
-
-    {/* Instagram */}
-    <a
-      href="https://instagram.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
-    >
-      <span className="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-3 rounded-full group-hover:scale-110 transition">
-        <FaInstagram className="text-lg" />
-      </span>
-      <div>
-        <p className="font-semibold text-gray-900">Instagram</p>
-        <p className="text-sm text-gray-600">Project visuals</p>
-      </div>
-    </a>
-
-    {/* LinkedIn */}
-    <a
-      href="https://linkedin.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
-    >
-      <span className="bg-blue-700 text-white p-3 rounded-full group-hover:scale-110 transition">
-        <FaLinkedinIn className="text-lg" />
-      </span>
-      <div>
-        <p className="font-semibold text-gray-900">LinkedIn</p>
-        <p className="text-sm text-gray-600">Corporate presence</p>
-      </div>
-    </a>
-
-    {/* X / Twitter */}
-    <a
-      href="https://x.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-4 p-4 rounded-lg border hover:shadow-md transition group"
-    >
-      <span className="bg-black text-white p-3 rounded-full group-hover:scale-110 transition">
-        <FaXTwitter className="text-lg" />
-      </span>
-      <div>
-        <p className="font-semibold text-gray-900">X (Twitter)</p>
-        <p className="text-sm text-gray-600">Latest announcements</p>
-      </div>
-    </a>
-  </div>
-</div>
 
 
   {/* ---------- Address & Info (UNCHANGED) ---------- */}
@@ -195,16 +136,17 @@ const Contact = () => {
       <FaMapMarkerAlt className="text-red-500 text-2xl mt-1" />
       <p className="text-gray-600 leading-relaxed">
         INSUS INFRATECH Private Limited<br />
-        Vidyalay Nagar, Jaipur<br />
+        B41 Vinayak Tower, Vidhyadhar Nagar, Jaipur<br />
         Rajasthan, India
       </p>
     </div>
 
 
     <div className="mt-8 rounded-lg overflow-hidden">
+
       <iframe
         title="map"
-        src="https://maps.google.com/maps?q=Jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.9784389837378!2d75.78379509999999!3d26.9675821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db23589bcbba5%3A0x9836ec72e0731931!2sVinayak%20Tower%20B-7%2C%20Sector%202%2C%20Central%20Spine%2C%20Vidyadhar%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302039!5e0!3m2!1sen!2sin!4v1772735146003!5m2!1sen!2sin"
         className="w-full h-48 border-0"
         loading="lazy"
       ></iframe>

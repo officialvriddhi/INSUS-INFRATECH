@@ -5,6 +5,8 @@ import { FaCheckCircle, FaArrowRight } from 'react-icons/fa'
 import { Image } from '@imagekit/react';
 import { Link, useNavigate } from 'react-router-dom';
 import scrollToTop from '../utils/ScrollToTop';
+import founder from '../assets/Founder.jpeg';
+import cofounder from '../assets/CO_Founder.jpeg';
 
 const About = () => {
   const heroRef = useRef(null)
@@ -334,13 +336,13 @@ const navigate = useNavigate()
           name: "Ramvilash Yadav",
           role: "Founder",
           exp: "Industry experience since 2005",
-          img: "https://wallpapercave.com/wp/iJpWQ3v.jpg",
+          img: founder,
         },
         {
           name: "Biresh Yadav",
           role: "Co-Founder",
           exp: "Industry experience since 2005",
-          img: "https://wallpapercave.com/wp/iJpWQ3v.jpg",
+          img: cofounder,
         },
       ].map((leader, index) => (
         <motion.div key={index} variants={cardVariants}>
@@ -366,11 +368,10 @@ const navigate = useNavigate()
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
                 className="w-full h-56 mb-6 overflow-hidden rounded-xl shadow-md"
               >
-                <Image
+                <img
                   src={leader.img}
                   alt={leader.name}
-                  className="w-full h-full object-cover hover-3d rounded-b-xl"
-                  loading="lazy"
+                  className="w-full h-full hover-3d rounded-b-xl object-cover object-[50%_7%]"
                 />
               </motion.div>
 

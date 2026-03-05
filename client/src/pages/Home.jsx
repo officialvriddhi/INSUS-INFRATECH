@@ -112,12 +112,13 @@ const Home = () => {
             <span className='h-fit'>
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
    bg-clip-text text-transparent">
-                  " Infrastructure That Stands the Test of Time "
+                  " Building Foundation for a Better Tomorrow "
               </p>
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
- bg-clip-text text-transparent">
-                  " Strong Foundations for a Stronger Tomorrow "
+   bg-clip-text text-transparent">
+                  " Infrastructure That Stands the Test of Time "
               </p>
+              
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
  bg-clip-text text-transparent">
                   " Engineering Excellence. Building the Future "
