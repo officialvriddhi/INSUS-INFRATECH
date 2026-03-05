@@ -78,13 +78,13 @@ const Contact = () => {
 
           {/* Email */}
           <a
-            href="mailto:contact@insusinfratech.com"
+            href="mailto:Insusinfra@gmail.com"
             className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition"
           >
             <FaEnvelope className="text-blue-600 text-2xl" />
             <div>
               <h4 className="font-semibold text-gray-900">Email Us</h4>
-              <p className="text-gray-600">contact@insusinfratech.com</p>
+              <p className="text-gray-600">Insusinfra@gmail.com</p>
             </div>
           </a>
 
