@@ -9,19 +9,12 @@ const Loader = () => {
       <div className="absolute inset-0 bg-white/30 backdrop-blur-xl"></div>
 
       {/* Loader Content */}
-      <div className="relative z-10 flex flex-col items-center gap-4">
+      <div className="relative z-10 flex flex-col justify-center items-center gap-4">
         
         {/* Logo Animation */}
-          <Image
-            src="/logo3.jpeg"
-            alt="INSUS Infratech logo"
-            className="w-24 h-24 rounded-full object-contain shadow-lg"
-            loading="lazy"
-          />
-
         {/* Text */}
         <p 
-        className="text-lg font-medium text-slate-600 tracking-wide animate-bounce">
+        className="text-xl font-bold text-slate-600 tracking-wide animate-bounce">
           Loading please wait ...
         </p>
       </div>
