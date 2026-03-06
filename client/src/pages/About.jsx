@@ -6,7 +6,7 @@ import { Image } from '@imagekit/react';
 import { Link, useNavigate } from 'react-router-dom';
 import scrollToTop from '../utils/ScrollToTop';
 import founder from '../assets/Founder.jpeg';
-import cofounder from '../assets/CO_Founder.jpeg';
+import cofounder from '../assets/CO_Founder2.jpeg';
 
 const About = () => {
   const heroRef = useRef(null)
@@ -69,28 +69,28 @@ const About = () => {
 
   const projects = [
       {
-        name:"Marriott Hotel – Jaipur",
-        img:'/IMg1.JPG'
+        name:"Cygnet Collections - Ayodhya",
+        img:'https://media.easemytrip.com/media/Hotel/SHL-2308091055303371/Common/CommonptGlml.jpg' //done
       },
       {
-        name:"Rambagh Palace – Jaipur",
-        img:'/IMG4.PNG'
-      },
-      {
-        name:"Sterling – Ayodhya",
-        img:'/IMG19.HEIC'
+        name:"Sterling – Ayodhya & Saryu",
+        img:'https://ik.imagekit.io/officialvriddhi/insus-infratech/sterlingAyodhya.jpeg' //done
       },
       {
         name:"Spinny – Lucknow",
-        img:'/IMG10.JPG'
+        img:'https://ik.imagekit.io/officialvriddhi/insus-infratech/spintLucknow1.jpeg'  //done
       },
       {
         name:"Dainik Bhaskar Office – Patna",
-        img:'/IMG2.JPG'
+        img:'https://ik.imagekit.io/officialvriddhi/insus-infratech/DainikBhaskar1.jpeg'  //done
       },
       {
-        name:"True Value – Indore",
-        img:'/IMG8.JPG'
+        name:"Ramada Hotel - Lucknow",
+        img:'https://ik.imagekit.io/officialvriddhi/insus-infratech/RamadaHotel1.jpeg'  //done
+      },
+      {
+        name:"Wilo Regional Office - Baroda",
+        img:'/WiilowRegionalOfficeBaroda1.jpeg'  //done
       },
   ]
 
@@ -371,7 +371,7 @@ const navigate = useNavigate()
                 <img
                   src={leader.img}
                   alt={leader.name}
-                  className="w-full h-full hover-3d rounded-b-xl object-cover object-[50%_7%]"
+                  className={`w-full h-full hover-3d rounded-b-xl object-cover  ${leader.name === "Ramvilash Yadav" ? "object-[50%_7%]" :"object-[50%_25%]"}`}
                 />
               </motion.div>
 

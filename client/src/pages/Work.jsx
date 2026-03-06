@@ -12,9 +12,8 @@ const Work = () => {
   },[])
 
 const locations = [
-  { title: "Hospitality Projects", slug: "hospitality-projects", image: "/hospitality.jpg" },
+  { title: "Hotels and Residential Projects", slug: "residential-and-others", image: "/residential.webp" },
   { title: "Corporate and Industrial Projects", slug: "corporate-and-industrial-projects", image: "/industrial.webp" },
-  { title: "Residential and Others", slug: "residential-and-others", image: "/residential.webp" },
 ];
 
 
@@ -64,7 +63,7 @@ const locations = [
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           variants={containerVariants}
-          className="grid md:grid-rows-2 lg:grid-rows-3 gap-6"
+          className="grid md:grid-rows-2 lg:grid-rows-2 gap-6"
         >
           {locations.map((item) => (
             <motion.div
