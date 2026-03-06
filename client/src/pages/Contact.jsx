@@ -10,6 +10,7 @@ import { SiGooglemeet } from "react-icons/si";
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import scrollToTop from "../utils/ScrollToTop";
+import logo from '../assets/InsusLogo.jpeg'
 
 
 
@@ -123,11 +124,11 @@ data-cal-namespace="client-consultation-insus-infra"
   {/* ---------- Address & Info (UNCHANGED) ---------- */}
   <div className="bg-white px-4 py-2 rounded-xl shadow-md border lg:py-5">
     <h3 className="text-xl font-semibold mb-6 text-gray-900 flex items-center justify-between lg:text-2xl">
-      <span className="tracking-wide">Office Address</span>
-        <Image
-            src="/logo3.jpeg"
+      <span className="tracking-wide  text-2xl">Office Address</span>
+        <img
+            src={logo}
             alt="logo"
-            className="size-12 rounded-full object-contain shadow-md cursor-pointer lg:size-16"
+            className="hidden md:block md:h-14  rounded-lg object-contain  cursor-pointer"
               loading="lazy"
                 />
     </h3>

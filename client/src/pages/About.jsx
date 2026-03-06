@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import scrollToTop from '../utils/ScrollToTop';
 import founder from '../assets/Founder.jpeg';
 import cofounder from '../assets/CO_Founder2.jpeg';
+import logo from '../assets/InsusLogo.jpeg'
 
 const About = () => {
   const heroRef = useRef(null)
@@ -137,10 +138,10 @@ const navigate = useNavigate()
 
   {/* ---------- Logo (Top Right) ---------- */}
   <div className="absolute top-6 right-6 z-30">
-    <Image
-      src="/logo3.jpeg"
+    <img
+      src={logo}
       alt="logo"
-      className="size-12 rounded-full object-cover shadow-lg"
+      className="h-10 md:h-14 rounded-lg object-contain shadow-lg"
       loading="lazy"
     />
   </div>
@@ -341,7 +342,7 @@ const navigate = useNavigate()
         {
           name: "Biresh Yadav",
           role: "Co-Founder",
-          exp: "Industry experience since 2005",
+          exp: "Industry experience since 2023",
           img: cofounder,
         },
       ].map((leader, index) => (

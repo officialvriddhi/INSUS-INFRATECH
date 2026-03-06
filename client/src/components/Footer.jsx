@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { FaArrowUp } from "react-icons/fa";
+import logo from '../assets/InsusLogo.jpeg'
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -60,12 +61,12 @@ const Footer = () => {
                 scrollToTop();
                 navigate("/");
               }}
-              className="flex items-center gap-3 cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer rounded-md"
             >
-              <Image
-                src="/logo3.jpeg"
+              <img
+                src={logo}
                 alt="Insus Infratech Logo"
-                className="w-12 h-12 rounded-full object-contain shadow"
+                className="w-12 h-12 object-contain rounded-md"
                 loading="lazy"
               />
               <h3 className="text-lg font-semibold">Insus Infratech Ltd.</h3>

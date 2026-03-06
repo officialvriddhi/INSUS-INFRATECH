@@ -3,6 +3,8 @@ import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { Image } from '@imagekit/react';
+import logo from '../assets/InsusLogo.jpeg'
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,11 +54,11 @@ const Navbar = () => {
         navbar bg-base-100 shadow-md px-3 lg:px-6"
       >
         {/* Logo */}
-        <div className="flex-1 cursor-pointer" onClick={() => navigate('/')}>
-          <Image
-            src="/logo3.jpeg"
+        <div className="flex-1 cursor-pointer overflow-hidden" onClick={() => navigate('/')}>
+          <img
+            src={logo}
             alt="logo"
-            className="size-12 rounded-full object-contain shadow-md"
+            className="h-10 w-auto rounded-lg object-cover"
             loading="lazy"
           />
         </div>
