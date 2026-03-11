@@ -7,6 +7,7 @@ import CountUp from '../components/Counter.jsx';
 import { HiUserGroup } from "react-icons/hi2";
 import homevideo from '../assets/INSUS_INFRATECH_Home_Video.mp4'
 import About from './About.jsx';
+import Brochure from './Brochure.jsx';
 import Work from './Work.jsx';
 import Services from './Services.jsx';
 import Contact from './Contact.jsx';
@@ -17,19 +18,19 @@ import scrollToTop from '../utils/ScrollToTop.jsx';
 const Home = () => {
   const navigate = useNavigate();
 
-    useEffect(()=>{
+  useEffect(() => {
     scrollToTop();
-  },[])
+  }, [])
 
 
 
   return (
     <>
 
-    <Helmet>
-      <meta name="google-site-verification" content="kjIYPSMXCv6dZPh7Rz1mxbNFN4zc89GhNlbvw1ERfi0" />
-      <script type="application/ld+json">
-        {`
+      <Helmet>
+        <meta name="google-site-verification" content="kjIYPSMXCv6dZPh7Rz1mxbNFN4zc89GhNlbvw1ERfi0" />
+        <script type="application/ld+json">
+          {`
         {
           "@context": "https://schema.org",
           "@type": "ConstructionBusiness",
@@ -48,8 +49,8 @@ const Home = () => {
           ]
         }
         `}
-      </script>
-    </Helmet>
+        </script>
+      </Helmet>
 
 
       {/* ================= HERO SECTION ================= */}
@@ -112,16 +113,16 @@ const Home = () => {
             <span className='h-fit'>
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
    bg-clip-text text-transparent">
-                  " Building Foundation for a Better Tomorrow "
+                " Building Foundation for a Better Tomorrow "
               </p>
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
    bg-clip-text text-transparent">
-                  " Infrastructure That Stands the Test of Time "
+                " Infrastructure That Stands the Test of Time "
               </p>
-              
+
               <p className="text-sm md:text-lg font-medium text-right bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500
  bg-clip-text text-transparent">
-                  " Engineering Excellence. Building the Future "
+                " Engineering Excellence. Building the Future "
               </p>
 
             </span>
@@ -173,12 +174,12 @@ const Home = () => {
               Our Work
             </button>
 
-              <button 
-              onClick={()=>navigate('/contact')}
-                className="px-6 py-2 rounded-md 
+            <button
+              onClick={() => navigate('/contact')}
+              className="px-6 py-2 rounded-md 
                 border border-white text-white
               hover:bg-white hover:text-black transition"
-                >Contact us</button>;
+            >Contact us</button>;
           </div>
 
         </div>
@@ -189,9 +190,10 @@ const Home = () => {
       bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300" />
 
       <About />
-      <Work/>
-      <Services/>
-      <Contact/>
+      <Brochure />
+      <Work />
+      <Services />
+      <Contact />
     </>
   );
 };
