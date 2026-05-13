@@ -22,14 +22,15 @@ const itemVariants = {
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Brochure", path: "/brochure" },
   { name: "Work", path: "/work" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
 ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -123,7 +124,7 @@ const Navbar = () => {
             <motion.li key={item.name} variants={itemVariants}>
               <NavLink
                 to={item.path}
-                onClick={() =>{ 
+                onClick={() => {
                   setMenuOpen(false)
                   scrollToTop()
                 }}

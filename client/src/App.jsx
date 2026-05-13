@@ -11,6 +11,7 @@ const Footer = React.lazy(() => import("./components/Footer"));
 
 const Home = React.lazy(() => import("./pages/Home"));
 const About = React.lazy(() => import("./pages/About"));
+const Brochure = React.lazy(() => import("./pages/Brochure"));
 const Work = React.lazy(() => import("./pages/Work"));
 const Services = React.lazy(() => import("./pages/Services"));
 const Contact = React.lazy(() => import("./pages/Contact"));
@@ -32,9 +33,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },   // /
       { path: "about", element: <About /> }, // /about
+      { path: "brochure", element: <Brochure /> }, // /brochure
       { path: "services", element: <Services /> }, // /services
       { path: "contact", element: <Contact /> },   // /contact
-      { path: "work", element: <Work />},   // /work
+      { path: "work", element: <Work /> },   // /work
       { path: "work/:city", element: <Projects /> },    // /delhi, /mumbai
     ],
   },
@@ -51,15 +53,15 @@ function App() {
         <ImageKitProvider urlEndpoint="https://ik.imagekit.io/officialvriddhi/insus-infratech">
           <Suspense fallback={<Loader />}>
             <RouterProvider router={router} />
-                  <SEO
-          title="Insus Infratech | Best Building Contractors in India"
-          description="Insus Infratech provides residential, commercial and industrial construction services in india with 20+ years experience."
+            <SEO
+              title="Insus Infratech | Best Building Contractors in India"
+              description="Insus Infratech provides residential, commercial and industrial construction services in india with 20+ years experience."
 
-          keywords="best construction work in india,construction company in india, building contractor near me , insus infratech , insus , infratech , contruction ,building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
-          url="https://insus-infratech.vercel.app/"
-          image="https://ik.imagekit.io/officialvriddhi/insus-infratech/logo3.jpeg?updatedAt=1765982258636"
+              keywords="best construction work in india,construction company in india, building contractor near me , insus infratech , insus , infratech , contruction ,building contractor, house construction, commercial builders , Ramvilash yadav , Biresh Yadav , best construction work in india "
+              url="https://insus-infratech.vercel.app/"
+              image="https://ik.imagekit.io/officialvriddhi/insus-infratech/logo3.jpeg?updatedAt=1765982258636"
 
-          />
+            />
           </Suspense>
         </ImageKitProvider>
       </LoadingProvider>
